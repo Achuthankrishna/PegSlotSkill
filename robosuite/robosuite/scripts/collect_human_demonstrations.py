@@ -13,6 +13,7 @@ from glob import glob
 
 import h5py
 import numpy as np
+import mujoco
 
 import robosuite as suite
 from robosuite.controllers import load_composite_controller_config
@@ -35,6 +36,7 @@ def collect_human_trajectory(env, device, arm, max_fr, goal_update_mode):
 
     env.reset()
     env.render()
+    commanded_absolute_actions=[]
 
     task_completion_hold_count = -1  # counter to collect 10 timesteps after reaching goal
     device.start_control()
@@ -58,6 +60,7 @@ def collect_human_trajectory(env, device, arm, max_fr, goal_update_mode):
 
         # Set active robot
         active_robot = env.robots[device.active_robot]
+        active_arm = device.active_arm
 
         # Get the newest action
         input_ac_dict = device.input2action(goal_update_mode=goal_update_mode)
@@ -87,6 +90,11 @@ def collect_human_trajectory(env, device, arm, max_fr, goal_update_mode):
         env_action = [robot.create_action_vector(all_prev_gripper_actions[i]) for i, robot in enumerate(env.robots)]
         env_action[device.active_robot] = active_robot.create_action_vector(action_dict)
         env_action = np.concatenate(env_action)
+        commanded_absolute_actions.append(
+            env.robots[device.active_robot]
+            .part_controllers[active_arm]
+            .delta_to_abs_action(env_action, goal_update_mode=None)
+        )
         for gripper_ac in all_prev_gripper_actions[device.active_robot]:
             all_prev_gripper_actions[device.active_robot][gripper_ac] = action_dict[gripper_ac]
 
@@ -114,10 +122,15 @@ def collect_human_trajectory(env, device, arm, max_fr, goal_update_mode):
                 time.sleep(diff)
 
     # cleanup for end of data collection episodes
+    if hasattr(env,"ep_directory"):
+        ep_directory=env.ep_directory
+    else:
+        ep_directory=None
     env.close()
+    return ep_directory,commanded_absolute_actions
 
 
-def gather_demonstrations_as_hdf5(directory, out_dir, env_info):
+def gather_demonstrations_as_hdf5(directory, out_dir, env_info,commanded_absolute_actions=None):
     """
     Gathers the demonstrations saved in @directory into a
     single hdf5 file.
@@ -143,9 +156,16 @@ def gather_demonstrations_as_hdf5(directory, out_dir, env_info):
         out_dir (str): Path to where to store the hdf5 file.
         env_info (str): JSON-encoded string containing environment information,
             including controller and robot info
+        commanded_absolute_actions (list):Commanded Actions used when teleoped
     """
 
-    hdf5_path = os.path.join(out_dir, "demo.hdf5")
+    # hdf5_path = os.path.join(out_dir, "demo.hdf5")
+    # f = h5py.File(hdf5_path, "w")
+    #Save H5 as datetime.hdf5 inside the data folder
+    t_now = time.time()
+    time_str = datetime.datetime.fromtimestamp(t_now).strftime("%Y-%m-%d-%H-%M-%S")
+    hdf5_path = os.path.join(out_dir, "demo_{}.hdf5".format(time_str))
+    print("Saving hdf5 to", hdf5_path)
     f = h5py.File(hdf5_path, "w")
 
     # store some metadata in the attributes of one group
@@ -155,7 +175,7 @@ def gather_demonstrations_as_hdf5(directory, out_dir, env_info):
     env_name = None  # will get populated at some point
 
     for ep_directory in os.listdir(directory):
-        state_paths = os.path.join(directory, ep_directory, "state_*.npz")
+        state_paths = os.path.join(directory, "state_*.npz")
         states = []
         actions = []
         success = False
@@ -185,7 +205,7 @@ def gather_demonstrations_as_hdf5(directory, out_dir, env_info):
             ep_data_grp = grp.create_group("demo_{}".format(num_eps))
 
             # store model xml as an attribute
-            xml_path = os.path.join(directory, ep_directory, "model.xml")
+            xml_path = os.path.join(directory, "model.xml")
             with open(xml_path, "r") as f:
                 xml_str = f.read()
             ep_data_grp.attrs["model_file"] = xml_str
@@ -193,6 +213,12 @@ def gather_demonstrations_as_hdf5(directory, out_dir, env_info):
             # write datasets for states and actions
             ep_data_grp.create_dataset("states", data=np.array(states))
             ep_data_grp.create_dataset("actions", data=np.array(actions))
+            if commanded_absolute_actions is not None and len(commanded_absolute_actions) == len(
+                actions
+            ):
+                ep_data_grp.create_dataset(
+                    "commanded_actions", data=np.array(commanded_absolute_actions)
+                )
         else:
             print("Demonstration is unsuccessful and has NOT been saved")
 
@@ -200,11 +226,13 @@ def gather_demonstrations_as_hdf5(directory, out_dir, env_info):
     now = datetime.datetime.now()
     grp.attrs["date"] = "{}-{}-{}".format(now.month, now.day, now.year)
     grp.attrs["time"] = "{}:{}:{}".format(now.hour, now.minute, now.second)
-    grp.attrs["repository_version"] = suite.__version__
+    grp.attrs["robosuite_version"] = suite.__version__
     grp.attrs["env"] = env_name
     grp.attrs["env_info"] = env_info
+    grp.attrs["mujoco_version"] = mujoco.__version__
 
     f.close()
+    return hdf5_path
 
 
 if __name__ == "__main__":
@@ -335,7 +363,7 @@ if __name__ == "__main__":
     env_info = json.dumps(config)
 
     # wrap the environment with data collection wrapper
-    tmp_directory = "/tmp/{}".format(str(time.time()).replace(".", "_"))
+    tmp_directory = args.directory
     env = DataCollectionWrapper(env, tmp_directory)
 
     # initialize device
@@ -379,5 +407,5 @@ if __name__ == "__main__":
 
     # collect demonstrations
     while True:
-        collect_human_trajectory(env, device, args.arm, args.max_fr, args.goal_update_mode)
-        gather_demonstrations_as_hdf5(tmp_directory, new_dir, env_info)
+        ep_directory=collect_human_trajectory(env, device, args.arm, args.max_fr, args.goal_update_mode)
+        hdf5_path=gather_demonstrations_as_hdf5(ep_directory,tmp_directory, env_info)

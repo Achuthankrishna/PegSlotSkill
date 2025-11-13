@@ -10,7 +10,9 @@ from robosuite.utils.mjcf_utils import CustomMaterial
 from robosuite.utils.observables import Observable, sensor
 from robosuite.utils.placement_samplers import UniformRandomSampler,SequentialCompositeSampler
 from robosuite.utils.transform_utils import convert_quat
-import os
+from robosuite.models.objects import MujocoXMLObject
+from robosuite.utils.sim_utils import check_contact
+
 
 class CubePlace(ManipulationEnv):
     """
@@ -406,13 +408,18 @@ class CubePlace(ManipulationEnv):
 
     def _check_success(self):
         """
-        Check if cube has been lifted.
+        Check if cube has been placed into the slot
 
         Returns:
             bool: True if cube has been lifted
         """
-        cube_height = self.sim.data.body_xpos[self.cube_body_id][2]
-        table_height = self.model.mujoco_arena.table_offset[2]
+        #checking success codnition via contact - Had to find the better contact point inside cuboid
+        peg_geom = self.cube.contact_geoms[0]  # assuming single geom for peg
 
-        # cube is higher than the table top above a margin
-        return cube_height > table_height + 0.04
+        slot_geoms = self.cuboid.contact_geoms[0] # adjust range based on number of slots
+        
+        if check_contact(self.sim, peg_geom, slot_geoms):
+            print(f"hitting geom {slot_geoms}")
+            return True
+
+        return False
