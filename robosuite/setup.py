@@ -31,6 +31,7 @@ setup(
         "imageio[pyav]",
         "imageio[ffmpeg]",
         "tqdm",
+        "trimesh",
     ],
     eager_resources=["*"],
     include_package_data=True,
