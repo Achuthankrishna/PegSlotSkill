@@ -297,3 +297,55 @@ class DoorObject(MujocoXMLObject):
         dic = super().important_sites
         dic.update({"handle": self.naming_prefix + "handle"})
         return dic
+#Class for cubr and cuboid objects
+class CubeObject(MujocoXMLObject):
+    """
+    Cube object
+    """
+
+    def __init__(self, name):
+        super().__init__(
+            xml_path_completion("objects/cube.xml"),
+            name=name,
+            joints=[dict(type="free", damping="0.0005")],
+            obj_type="all",
+            duplicate_collision_geoms=True,
+        )
+    @property
+    def important_sites(self):
+        """
+        Returns:
+            dict: In addition to any default sites for this object, also provides the following entries
+
+                :`'center'`: Name of cube center location site
+        """
+        # Get dict from super call and add to it
+        dic = super().important_sites
+        dic.update({"center": self.naming_prefix + "center_site"})
+        return dic
+class CuboidObject(MujocoXMLObject):
+    """
+    Cube object
+    """
+
+    def __init__(self, name):
+        super().__init__(
+            xml_path_completion("objects/cuboid_arena.xml"),
+            name=name,
+            joints=[dict(type="free", damping="0.0005")],
+            obj_type="all",
+            duplicate_collision_geoms=True,
+        )
+    @property
+    def important_sites(self):
+        """
+        Returns:
+            dict: In addition to any default sites for this object, also provides the following entries
+
+                :`'center'`: Name of cube center location site
+        """
+        # Get dict from super call and add to it
+        dic = super().important_sites
+        dic.update({"center": self.naming_prefix + "center_site"})
+        return dic
+    
