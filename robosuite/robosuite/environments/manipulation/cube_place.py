@@ -258,37 +258,58 @@ class CubePlace(ManipulationEnv):
 
         self.objects = []
         object_names = ("peg", "slot")
+        # TODO:Uncomment this for random sampling of the location of the object 
+        
+        # # Create a SequentialCompositeSampler since we are using 2 objects (like nut_assembly.py)
+        # if self.placement_initializer is None:
+        #     self.placement_initializer = SequentialCompositeSampler(name="ObjectSampler")
 
-        # Create a SequentialCompositeSampler since we are using 2 objects (like nut_assembly.py)
-        if self.placement_initializer is None:
-            self.placement_initializer = SequentialCompositeSampler(name="ObjectSampler")
+        #     y_ranges = ([0.1, 0.2], [0.2, 0.5]) 
 
-            y_ranges = ([0.1, 0.2], [0.2, 0.5]) 
+        #     for obj_name, y_range in zip(object_names, y_ranges):
+        #         sampler = UniformRandomSampler(
+        #             name=f"{obj_name}Sampler",
+        #             x_range=[0.25, 0.35],
+        #             y_range=y_range,
+        #             rotation=None,
+        #             rotation_axis="z",
+        #             ensure_object_boundary_in_range=False,
+        #             ensure_valid_placement=True,
+        #             reference_pos=self.robots[0].robot_model.base_offset + [0, 0, 0],  # base reference
+        #             z_offset=0.01,
+        #             rng=self.rng,
+        #         )
+        #         self.placement_initializer.append_sampler(sampler)
 
-            for obj_name, y_range in zip(object_names, y_ranges):
-                sampler = UniformRandomSampler(
-                    name=f"{obj_name}Sampler",
-                    x_range=[0.25, 0.35],
-                    y_range=y_range,
-                    rotation=None,
-                    rotation_axis="z",
-                    ensure_object_boundary_in_range=False,
-                    ensure_valid_placement=True,
-                    reference_pos=self.robots[0].robot_model.base_offset + [0, 0, 0],  # base reference
-                    z_offset=0.01,
-                    rng=self.rng,
-                )
-                self.placement_initializer.append_sampler(sampler)
+        # self.placement_initializer.reset()
 
-        self.placement_initializer.reset()
+        # # Link to their respective samplers
+        # for obj_cls, obj_name in zip((CubeObject, CuboidObject), object_names):
+        #     obj = obj_cls(name=obj_name)
+        #     self.objects.append(obj)
+        #     self.placement_initializer.add_objects_to_sampler(sampler_name=f"{obj_name}Sampler", mujoco_objects=obj)
 
-        # Link to their respective samplers
-        for obj_cls, obj_name in zip((CubeObject, CuboidObject), object_names):
+        # # Create the task
+        # self.model = ManipulationTask(
+        #     mujoco_arena=mujoco_arena,
+        #     mujoco_robots=[robot.robot_model for robot in self.robots],
+        #     mujoco_objects=self.objects,
+        # )
+        #
+        #For static loading 
+        #getting baase pose of thr robot
+        base_pos = self.robots[0].robot_model.base_offset
+        # we init objects at constant positions
+        constant_positions = [
+            [base_pos[0] + 0.5, base_pos[1] + 0.0, base_pos[2]],  # peg
+            [base_pos[0] + 0.5, base_pos[1] + 0.2, base_pos[2]],  # slot
+        ]
+        self.objects = []
+        for obj_cls, obj_name, obj_pos in zip((CubeObject, CuboidObject), object_names, constant_positions):
             obj = obj_cls(name=obj_name)
             self.objects.append(obj)
-            self.placement_initializer.add_objects_to_sampler(sampler_name=f"{obj_name}Sampler", mujoco_objects=obj)
-
-        # Create the task
+            obj.initial_pos = obj_pos
+        # No randomization
         self.model = ManipulationTask(
             mujoco_arena=mujoco_arena,
             mujoco_robots=[robot.robot_model for robot in self.robots],
