@@ -8,7 +8,7 @@ from robosuite.models.objects import *
 from robosuite.models.tasks import ManipulationTask
 from robosuite.utils.mjcf_utils import CustomMaterial
 from robosuite.utils.observables import Observable, sensor
-from robosuite.utils.placement_samplers import UniformRandomSampler
+from robosuite.utils.placement_samplers import UniformRandomSampler,SequentialCompositeSampler
 from robosuite.utils.transform_utils import convert_quat
 import os
 
@@ -227,11 +227,6 @@ class CubePlace(ManipulationEnv):
         """
         super()._load_model()
 
-        # Adjust base pose accordingly
-        xpos = self.robots[0].robot_model.base_xpos_offset["table"](self.table_full_size[0])
-        self.robots[0].robot_model.set_base_xpos(xpos)
-
-        # load model for table top workspace
         mujoco_arena = EmptyArena()
 
         # Arena always gets set to zero origin
@@ -253,34 +248,51 @@ class CubePlace(ManipulationEnv):
             tex_attrib=tex_attrib,
             mat_attrib=mat_attrib,
         )
-        #importing cube and cuboid
-        cube_path=os.path.abspath("robosuite/models/assets/cube.xml")
-        self.cube=CubeObject(name="peg")
-        self.cuboid=CuboidObject(name="slot")
+        cube_xml_path = "/home/achukrish/robosuite/robosuite/models/assets/cube.xml"  # Update this path
+        self.cube = CubeObject(name="peg")
+        self.cuboid = CuboidObject(name="slot")
+        breakpoint()
 
-        # Create placement initializer
-        if self.placement_initializer is not None:
-            self.placement_initializer.reset()
-            self.placement_initializer.add_objects(self.cube)
-        else:
-            self.placement_initializer = UniformRandomSampler(
-                name="ObjectSampler",
-                mujoco_objects=self.cube,
-                x_range=[-0.03, 0.03],
-                y_range=[-0.03, 0.03],
-                rotation=None,
-                ensure_object_boundary_in_range=False,
-                ensure_valid_placement=True,
-                reference_pos=self.table_offset,
-                z_offset=0.01,
-                rng=self.rng,
-            )
+        # # Create placement initializer for both objects
+        mujoco_objects = [self.cube, self.cuboid]
 
-        # task includes arena, robot, and objects of interest
+        self.objects = []
+        object_names = ("peg", "slot")
+
+        # Create a SequentialCompositeSampler since we are using 2 objects (like nut_assembly.py)
+        if self.placement_initializer is None:
+            self.placement_initializer = SequentialCompositeSampler(name="ObjectSampler")
+
+            y_ranges = ([0.1, 0.2], [0.2, 0.5]) 
+
+            for obj_name, y_range in zip(object_names, y_ranges):
+                sampler = UniformRandomSampler(
+                    name=f"{obj_name}Sampler",
+                    x_range=[0.25, 0.35],
+                    y_range=y_range,
+                    rotation=None,
+                    rotation_axis="z",
+                    ensure_object_boundary_in_range=False,
+                    ensure_valid_placement=True,
+                    reference_pos=self.robots[0].robot_model.base_offset + [0, 0, 0],  # base reference
+                    z_offset=0.01,
+                    rng=self.rng,
+                )
+                self.placement_initializer.append_sampler(sampler)
+
+        self.placement_initializer.reset()
+
+        # Link to their respective samplers
+        for obj_cls, obj_name in zip((CubeObject, CuboidObject), object_names):
+            obj = obj_cls(name=obj_name)
+            self.objects.append(obj)
+            self.placement_initializer.add_objects_to_sampler(sampler_name=f"{obj_name}Sampler", mujoco_objects=obj)
+
+        # Create the task
         self.model = ManipulationTask(
             mujoco_arena=mujoco_arena,
             mujoco_robots=[robot.robot_model for robot in self.robots],
-            mujoco_objects=self.cube,
+            mujoco_objects=self.objects,
         )
 
     def _setup_references(self):
