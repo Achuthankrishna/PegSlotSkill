@@ -5,7 +5,8 @@ import time
 import json
 import os 
 from robosuite.utils.sim_utils import check_contact
-
+import robosuite.macros as macros
+import argparse
 class PickPlaceAgent:
     """
     Scripted agent for peg-in-hole test with subtasks:
@@ -57,10 +58,95 @@ class PickPlaceAgent:
             pos = 3.0*(target_pos - gripper_pos)
             print("pos:", pos)
             ori = np.zeros(3)
+        #subtask2 : lift the  peg
+        elif self.subtask==2:
+            print("lifting Peg")
+            #target as height
+            target_pos = np.array([self.reach_pos[0],self.reach_pos[1],self.lift_height])
+            jaw=self.jaw_close
+            print("target_pos:", target_pos)
+            print("gripper_pos:", gripper_pos)
+            if np.allclose(gripper_pos, target_pos, atol=1e-2):
+                print("Reached lift height, holding position")
+                self.subtask=3
+            #update pos
+            pos=3.0*(target_pos-gripper_pos)
+            ori=np.zeros(3)
+        
         self.step += 1
         return np.concatenate([pos, ori, [jaw]]),done,success
+
+def play_sim(agent,speed=1.0,episode_len=100,log_path="sim_log.json",control_freq=20):
+    """
+    Main Simulating function
+    Args:
+        agent : Agent Class
+        speed : Simulation speed. Defaults to 1.0.
+        episode_len : Length of the episode. Defaults to 100.
+        log_path : file name with path. Defaults to "sim_log.json".
+        control_freq: Frequency where IK updates are made . Deaults to 20
+    """
+    #make env
+
+    env=suite.make(
+        "CubePlace",
+        has_renderer=True,
+        has_offscreen_renderer=False,
+        use_camera_obs=False,
+        control_freq=control_freq,
+        robots="PandaRobotiq",
+
+    )
+    data=[]
+    #set state with current env observation (static state)
+    obs=env.reset()
+    #sim warmup : Good practice to not make the objects to fall
+    for _ in range(30):
+        env.sim.step()
+    time.sleep(0.1)
+    breakpoint()
+    for s in range(episode_len):
+        print("step_number",s)
+        action,done,success=agent.perform_action(obs,env=env)
+        #so the action modality is 6 + 1 for jaw
+        pose=action[:6]
+        jaw=action[6]
+        #apply to env and step
+        obs,_,_,_=env.step(np.concatenate([pose,[jaw]]))
+        #to update per speed
+
+        time.sleep(0.01/speed)
+        if success:
+            break
+    env.close()
+    print("Done simulating")
 
 #TestCall
 if __name__ == "__main__":
     agent=PickPlaceAgent()
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--sim_speed",
+        type=float,
+        default=0.002,
+        help="Effective simulation time in seconds ; ie - how often env.step() updates"
+    )
+    parser.add_argument("--episode_length", 
+                        type=int, 
+                        default=5000,
+                        help="Entire episode length")
+    parser.add_argument(
+        "--log_path",
+        type=str,
+        default="./",
+        help="default log path",
+    )
+    parser.add_argument("--step_speed", 
+                        type=int, 
+                        default=1,
+                        help="Speed at which playback loop runs")
+    args = parser.parse_args()
+
+    macros.SIMULATION_TIMESTEP=args.sim_speed
+    play_sim(agent,episode_len=args.episode_length,speed=args.step_speed)
     
