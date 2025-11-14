@@ -182,7 +182,6 @@ def get_env_metadata_from_dataset(dataset_path, ds_format="robomimic"):
     """
     dataset_path = os.path.expanduser(dataset_path)
     f = h5py.File(dataset_path, "r")
-    breakpoint()
     if ds_format == "robomimic":
         env_meta = json.loads(f["data"].attrs["env_args"])
     else:
@@ -359,7 +358,6 @@ def playback_dataset(args):
     # maybe dump video
     video_writer = None
     if write_video:
-        breakpoint()
         video_writer = imageio.get_writer(args.video_path, fps=20)
 
     for ind in range(len(demos)):

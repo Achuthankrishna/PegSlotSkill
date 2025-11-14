@@ -180,7 +180,6 @@ def play_sim(agent,speed=1.0,episode_len=100,log_path="sim_log.json",control_fre
     for _ in range(30):
         env.sim.step()
     time.sleep(0.1)
-    breakpoint()
     for s in range(episode_len):
         print("step_number",s)
         action,done,success=agent.perform_action(obs,env=env)
