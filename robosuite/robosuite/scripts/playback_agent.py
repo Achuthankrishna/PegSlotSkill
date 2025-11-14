@@ -16,7 +16,7 @@ class PickPlaceAgent:
     4. bring arm down closer to hole pose
     5. release gripper
     """
-    def __init__(self,lift_height=0.15, jaw_open=0.0, jaw_close=0.5):
+    def __init__(self,lift_height=0.15, jaw_open=-1.0, jaw_close=0.5):
         self.step=0
         self.reach_pos=None
         self.lift_height = lift_height
@@ -91,7 +91,7 @@ class PickPlaceAgent:
         elif self.subtask==4:
             print("Bringing closer to placing")
             # target_pos = [self.reach2_pos[0]+0.025,self.reach2_pos[1]-0.03, self.reach2_pos[2]+0.1]
-            target_pos = [self.reach2_pos[0],self.reach2_pos[1], self.reach2_pos[2]]
+            target_pos = [self.reach2_pos[0]+0.02,self.reach2_pos[1]-0.03, self.reach2_pos[2]+0.1]
             jaw=self.jaw_close
             if np.allclose(gripper_pos, target_pos, atol=1e-2):
                 print("Reached lift height, holding position")
@@ -99,7 +99,46 @@ class PickPlaceAgent:
                 self.subtask = 5  # Hold position
             pos =1.5*(target_pos - gripper_pos)
             target_ori=[0.0,2*np.pi/3,0.0]
-            ori=0.1*(np.array(target_ori)-np.zeros(3))
+            #Calculate ori error with current ori of gripper
+            from scipy.spatial.transform import Rotation as R
+            current_rot_mat=env.sim.data.get_site_xmat("gripper0_right_grip_site").reshape(3,3)
+            # print(current_rot_mat)
+            #RotMat to Euler
+            current_euler_ori=R.from_matrix(current_rot_mat).as_euler('xyz')
+            orien_error=target_ori-current_euler_ori
+            #L2 ori error
+            ori_norm=np.linalg.norm(orien_error)
+            #Dont rotate much - so stop ori early
+            if ori_norm > 2.0:
+                #slow update
+                ori=0.05*orien_error
+            else:
+                ori=np.zeros(3)
+        #subtask 5: place into the slot
+        elif self.subtask==5:
+            print("Final Subtask")
+            target_pos = [self.reach2_pos[0],self.reach2_pos[1]-0.02, self.reach2_pos[2]+0.05]
+            jaw=self.jaw_close
+            if np.allclose(gripper_pos, target_pos, atol=1e-2):
+                print("Placed on slot")
+                #break the loop
+                jaw = self.jaw_open
+                done=True
+            pos = 1.0*(target_pos-gripper_pos)
+            ori = np.zeros(3)
+            # target_ori = [0,0,0]
+            # ori= 0.1*(np.array(target_ori) - np.zeros(3))
+            # from scipy.spatial.transform import Rotation as R
+            # current_rot_mat = env.sim.data.get_site_xmat("gripper0_right_grip_site").reshape(3,3)
+            # current_ori = R.from_matrix(current_rot_mat).as_euler('xyz')
+            # ori_error = target_ori - current_ori
+            # ori_norm = np.linalg.norm(ori_error)
+            # print("ori_error:", ori_norm)
+        else:
+            pos = np.zeros(3)
+            ori = np.zeros(3)
+            jaw = -1.0
+
 
 
         self.step += 1
@@ -145,7 +184,7 @@ def play_sim(agent,speed=1.0,episode_len=100,log_path="sim_log.json",control_fre
         #to update per speed
 
         time.sleep(0.01/speed)
-        if success:
+        if success or done:
             break
     env.close()
     print("Done simulating")
