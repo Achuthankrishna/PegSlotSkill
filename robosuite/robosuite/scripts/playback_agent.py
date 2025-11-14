@@ -70,9 +70,38 @@ class PickPlaceAgent:
                 print("Reached lift height, holding position")
                 self.subtask=3
             #update pos
-            pos=3.0*(target_pos-gripper_pos)
+            pos=1.5*(target_pos-gripper_pos)
+            #flip the eef by 90 deg by roll
+            target_ori=[np.pi/4,0,0]
+            ori=0.1*(np.array(target_ori)-np.zeros(3))
+        #Subtask 3: Go near the slot
+        elif self.subtask==3:
+            print("Moving peg to slot")
+            #rech2pos as target + some hegith threshold
+            target_pos=[self.reach2_pos[0],self.reach2_pos[1],self.reach2_pos[2]+self.lift_height]
+            jaw=self.jaw_close
+            print("L2 distance for task 3",np.linalg.norm(gripper_pos-target_pos))
+            #threshold selection : closer to the target + threshold
+            if np.allclose(gripper_pos, target_pos, atol=1e-2):
+                self.subtask=4
+            pos=1.0*(target_pos-gripper_pos)
             ori=np.zeros(3)
-        
+
+        #subtask4: Rotate along pitch by 120
+        elif self.subtask==4:
+            print("Bringing closer to placing")
+            # target_pos = [self.reach2_pos[0]+0.025,self.reach2_pos[1]-0.03, self.reach2_pos[2]+0.1]
+            target_pos = [self.reach2_pos[0],self.reach2_pos[1], self.reach2_pos[2]]
+            jaw=self.jaw_close
+            if np.allclose(gripper_pos, target_pos, atol=1e-2):
+                print("Reached lift height, holding position")
+                #break the loop
+                self.subtask = 5  # Hold position
+            pos =1.5*(target_pos - gripper_pos)
+            target_ori=[0.0,2*np.pi/3,0.0]
+            ori=0.1*(np.array(target_ori)-np.zeros(3))
+
+
         self.step += 1
         return np.concatenate([pos, ori, [jaw]]),done,success
 
