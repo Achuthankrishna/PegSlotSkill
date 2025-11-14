@@ -43,5 +43,5 @@ The teleop-ed data can be played back using a playback script borrowed from Robo
 python robosuite/scripts/playback_dataset.py --dataset XXXX/robosuite_data_2/demo_2025-11-XXXX.hdf5  --use-actions --n 1
 ```
 here `use-actions` is used to step the ennvironments with the actions stored in the H5 file. 
-![Video](./robosuite_data_2/demo_use_acrtion_spedup.mp4)
+![Video](./robosuite_data_2/use_action.gif)
 
