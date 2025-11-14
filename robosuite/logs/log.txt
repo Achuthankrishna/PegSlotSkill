@@ -1,0 +1,3313 @@
+(robot-skill-sim) achukrish@AKLinux:~/PegSlotSkill/robosuite$ python robosuite/scripts/playback_agent.py --log_path robosuite/sim_log.json
+[robosuite WARNING] No private macro file found! (macros.py:57)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:58)
+[robosuite WARNING] To setup, run: python /home/achukrish/PegSlotSkill/robosuite/robosuite/scripts/setup_macros.py (macros.py:59)
+[robosuite INFO] Loading controller configuration from: /home/achukrish/PegSlotSkill/robosuite/robosuite/controllers/config/default/composite/basic.json (composite_controller_factory.py:121)
+[robosuite WARNING] The config has defined for the controller "left", but the robot does not have this component. Skipping, but make sure this is intended.Removing the controller config for left from self.part_controller_config. (robot.py:151)
+[robosuite WARNING] The config has defined for the controller "torso", but the robot does not have this component. Skipping, but make sure this is intended.Removing the controller config for torso from self.part_controller_config. (robot.py:151)
+[robosuite WARNING] The config has defined for the controller "head", but the robot does not have this component. Skipping, but make sure this is intended.Removing the controller config for head from self.part_controller_config. (robot.py:151)
+[robosuite WARNING] The config has defined for the controller "base", but the robot does not have this component. Skipping, but make sure this is intended.Removing the controller config for base from self.part_controller_config. (robot.py:151)
+[robosuite WARNING] The config has defined for the controller "legs", but the robot does not have this component. Skipping, but make sure this is intended.Removing the controller config for legs from self.part_controller_config. (robot.py:151)
+[robosuite INFO] Loading controller configuration from: /home/achukrish/PegSlotSkill/robosuite/robosuite/controllers/config/default/composite/basic.json (composite_controller_factory.py:121)
+[robosuite WARNING] The config has defined for the controller "left", but the robot does not have this component. Skipping, but make sure this is intended.Removing the controller config for left from self.part_controller_config. (robot.py:151)
+[robosuite WARNING] The config has defined for the controller "torso", but the robot does not have this component. Skipping, but make sure this is intended.Removing the controller config for torso from self.part_controller_config. (robot.py:151)
+[robosuite WARNING] The config has defined for the controller "head", but the robot does not have this component. Skipping, but make sure this is intended.Removing the controller config for head from self.part_controller_config. (robot.py:151)
+[robosuite WARNING] The config has defined for the controller "base", but the robot does not have this component. Skipping, but make sure this is intended.Removing the controller config for base from self.part_controller_config. (robot.py:151)
+[robosuite WARNING] The config has defined for the controller "legs", but the robot does not have this component. Skipping, but make sure this is intended.Removing the controller config for legs from self.part_controller_config. (robot.py:151)
+> /home/achukrish/PegSlotSkill/robosuite/robosuite/scripts/playback_agent.py(184)play_sim()
+-> for s in range(episode_len):
+(Pdb) c
+step_number 0
+Norm dist between gripper and slot 0.07132932460564209
+pos: [ 0.10498299 -0.09134645 -0.16255846]
+step_number 1
+Norm dist between gripper and slot 0.06871694263025614
+pos: [ 0.11142026 -0.08924308 -0.14872579]
+step_number 2
+Norm dist between gripper and slot 0.06636662849796778
+pos: [ 0.10854505 -0.08686119 -0.14252673]
+step_number 3
+Norm dist between gripper and slot 0.06390443007072508
+pos: [ 0.10619677 -0.08427883 -0.13554819]
+step_number 4
+Norm dist between gripper and slot 0.061500102741008186
+pos: [ 0.10364368 -0.08169471 -0.12893535]
+step_number 5
+Norm dist between gripper and slot 0.0591746692627473
+pos: [ 0.10094605 -0.07913822 -0.12272657]
+step_number 6
+Norm dist between gripper and slot 0.05693109329280208
+pos: [ 0.09815182 -0.07662446 -0.11689849]
+step_number 7
+Norm dist between gripper and slot 0.054768022881280944
+pos: [ 0.09529451 -0.07416244 -0.11142134]
+step_number 8
+Norm dist between gripper and slot 0.0526832570526654
+pos: [ 0.09240033 -0.07175795 -0.10626715]
+step_number 9
+Norm dist between gripper and slot 0.05073795998505744
+pos: [ 0.0904233  -0.06917473 -0.10103241]
+step_number 10
+Norm dist between gripper and slot 0.04893585310509667
+pos: [ 0.08860913 -0.06645666 -0.09635556]
+step_number 11
+Norm dist between gripper and slot 0.04725607535021307
+pos: [ 0.08674893 -0.06361584 -0.09233568]
+step_number 12
+Norm dist between gripper and slot 0.04567168309169541
+pos: [ 0.08475361 -0.06065297 -0.08894474]
+step_number 13
+Norm dist between gripper and slot 0.04416717430351418
+pos: [ 0.08262751 -0.05758527 -0.08610044]
+step_number 14
+Norm dist between gripper and slot 0.04273699017820069
+pos: [ 0.08044061 -0.05444541 -0.08368428]
+step_number 15
+Norm dist between gripper and slot 0.041379222147071244
+pos: [ 0.07822555 -0.05129847 -0.08160509]
+step_number 16
+Norm dist between gripper and slot 0.04012557131500943
+pos: [ 0.07598641 -0.04840623 -0.07983393]
+step_number 17
+Norm dist between gripper and slot 0.03893234470661735
+pos: [ 0.07369804 -0.04557514 -0.07831381]
+step_number 18
+Norm dist between gripper and slot 0.03778863213666547
+pos: [ 0.07139712 -0.04279626 -0.07695946]
+step_number 19
+Norm dist between gripper and slot 0.03669390657213335
+pos: [ 0.06913351 -0.04007948 -0.07571115]
+step_number 20
+Norm dist between gripper and slot 0.03564299968993329
+pos: [ 0.06688607 -0.03743336 -0.07455741]
+step_number 21
+Norm dist between gripper and slot 0.034634053371171244
+pos: [ 0.06466648 -0.03484571 -0.07348253]
+step_number 22
+Norm dist between gripper and slot 0.03366342596619564
+pos: [ 0.06244349 -0.03233125 -0.07248819]
+step_number 23
+Norm dist between gripper and slot 0.032735622845376164
+pos: [ 0.06028427 -0.02992143 -0.07151995]
+step_number 24
+Norm dist between gripper and slot 0.031840426972726606
+pos: [ 0.05810065 -0.02755424 -0.07063564]
+step_number 25
+Norm dist between gripper and slot 0.03100430251424065
+pos: [ 0.05588735 -0.02543185 -0.06986578]
+step_number 26
+Norm dist between gripper and slot 0.03022066707235779
+pos: [ 0.05368358 -0.02345711 -0.0691913 ]
+step_number 27
+Norm dist between gripper and slot 0.029473301663111212
+pos: [ 0.05148272 -0.02154067 -0.06858286]
+step_number 28
+Norm dist between gripper and slot 0.028761626567888488
+pos: [ 0.04931239 -0.01968995 -0.06801231]
+step_number 29
+Norm dist between gripper and slot 0.028084399974870295
+pos: [ 0.0471804  -0.01790427 -0.06746887]
+step_number 30
+Norm dist between gripper and slot 0.027440729096355275
+pos: [ 0.04511414 -0.01618806 -0.06692984]
+step_number 31
+Norm dist between gripper and slot 0.026829624217870923
+pos: [ 0.04309767 -0.01452178 -0.06640909]
+step_number 32
+Norm dist between gripper and slot 0.02624956456845106
+pos: [ 0.04113748 -0.01291641 -0.06589561]
+step_number 33
+Norm dist between gripper and slot 0.025699528148447417
+pos: [ 0.03922534 -0.01136724 -0.06539381]
+step_number 34
+Norm dist between gripper and slot 0.025178569033681257
+pos: [ 0.03736648 -0.00987131 -0.06489951]
+step_number 35
+Norm dist between gripper and slot 0.024685830945111
+pos: [ 0.03555358 -0.00842834 -0.06441598]
+step_number 36
+Norm dist between gripper and slot 0.024220250073088846
+pos: [ 0.03379163 -0.00703993 -0.06393864]
+step_number 37
+Norm dist between gripper and slot 0.023781328695144408
+pos: [ 0.03207421 -0.00570242 -0.06347197]
+step_number 38
+Norm dist between gripper and slot 0.02336768645740295
+pos: [ 0.03041976 -0.0044138  -0.06300472]
+step_number 39
+Norm dist between gripper and slot 0.0229766664223023
+pos: [ 0.0288227  -0.00319755 -0.06253297]
+step_number 40
+Norm dist between gripper and slot 0.022608694240978125
+pos: [ 0.02728557 -0.00202862 -0.06206255]
+step_number 41
+Norm dist between gripper and slot 0.022271787729172172
+pos: [ 0.02581289 -0.00085054 -0.06162195]
+step_number 42
+Norm dist between gripper and slot 0.02197229012925502
+pos: [ 0.02438669  0.00039875 -0.06123858]
+step_number 43
+Norm dist between gripper and slot 0.021707449719863454
+pos: [ 0.0229963   0.00174758 -0.06090186]
+step_number 44
+Norm dist between gripper and slot 0.021472760273010847
+pos: [ 0.02165418  0.00321205 -0.0605846 ]
+step_number 45
+Norm dist between gripper and slot 0.021275260107439232
+pos: [ 0.02040537  0.00486568 -0.06027998]
+step_number 46
+Norm dist between gripper and slot 0.021126815358147345
+pos: [ 0.01934932  0.00688441 -0.05996074]
+step_number 47
+Norm dist between gripper and slot 0.02100038078037049
+pos: [ 0.01907059  0.00963505 -0.05926738]
+step_number 48
+Norm dist between gripper and slot 0.020751395297221406
+pos: [ 0.01862177  0.01227602 -0.05812153]
+step_number 49
+Norm dist between gripper and slot 0.020369371932611794
+pos: [ 0.0181089   0.01443341 -0.05655039]
+step_number 50
+Norm dist between gripper and slot 0.019938704858827188
+pos: [ 0.01760508  0.01627111 -0.05480219]
+step_number 51
+Norm dist between gripper and slot 0.01948742567010543
+pos: [ 0.0171446   0.01783221 -0.05297086]
+step_number 52
+Norm dist between gripper and slot 0.01902835253958506
+pos: [ 0.01672493  0.01916284 -0.05110544]
+step_number 53
+Norm dist between gripper and slot 0.018568622122860805
+pos: [ 0.01634068  0.02029961 -0.04923466]
+step_number 54
+Norm dist between gripper and slot 0.018107272238050774
+pos: [ 0.01599085  0.02123205 -0.0473746 ]
+step_number 55
+Norm dist between gripper and slot 0.017643648290341346
+pos: [ 0.01567038  0.02196158 -0.04553914]
+step_number 56
+Norm dist between gripper and slot 0.017179030189853586
+pos: [ 0.01537586  0.02250995 -0.04373736]
+step_number 57
+Norm dist between gripper and slot 0.016726960770328335
+pos: [ 0.01503039  0.02292222 -0.04203309]
+step_number 58
+Norm dist between gripper and slot 0.016290358721118073
+pos: [ 0.01472523  0.02322982 -0.04039709]
+step_number 59
+Norm dist between gripper and slot 0.015864023038410807
+pos: [ 0.01443519  0.02344047 -0.03882235]
+step_number 60
+Norm dist between gripper and slot 0.01545045165848862
+pos: [ 0.0141572   0.02359191 -0.03730206]
+step_number 61
+Norm dist between gripper and slot 0.015052136274826452
+pos: [ 0.01388888  0.02370934 -0.03583389]
+step_number 62
+Norm dist between gripper and slot 0.01466960870760172
+pos: [ 0.01362835  0.02380278 -0.03441617]
+step_number 63
+Norm dist between gripper and slot 0.014302018412879355
+pos: [ 0.01337521  0.02387328 -0.03304693]
+step_number 64
+Norm dist between gripper and slot 0.013947211761039526
+pos: [ 0.01313521  0.02391623 -0.0317207 ]
+step_number 65
+Norm dist between gripper and slot 0.013606195532594087
+pos: [ 0.01290956  0.02394214 -0.03043475]
+step_number 66
+Norm dist between gripper and slot 0.013279787329592473
+Closing gripper on peg
+pos: [ 0.01269682  0.02395891 -0.02918795]
+step_number 67
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [ 0.50579225 -0.00829536  0.01719891]
+step_number 68
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [ 0.50585344 -0.00647387  0.01841463]
+step_number 69
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [ 0.5060957  -0.00462775  0.02119721]
+step_number 70
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [ 0.50623046 -0.00366842  0.02425187]
+step_number 71
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [ 0.50626132 -0.00270974  0.02713962]
+step_number 72
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [ 0.50643445 -0.00134737  0.029934  ]
+step_number 73
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [5.06603412e-01 1.12079550e-04 3.26038920e-02]
+step_number 74
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.50672513 0.00129432 0.03518251]
+step_number 75
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.50680637 0.00221305 0.03768112]
+step_number 76
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.50683639 0.00290023 0.04009251]
+step_number 77
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.5068085  0.00338748 0.04241293]
+step_number 78
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.50671328 0.00371179 0.04463578]
+step_number 79
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.50654603 0.00390318 0.04675761]
+step_number 80
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.50630585 0.00398961 0.04877869]
+step_number 81
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.50599244 0.00399938 0.05069964]
+step_number 82
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.50560961 0.00395093 0.05252349]
+step_number 83
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.50516069 0.00386685 0.05425351]
+step_number 84
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.50465281 0.00375977 0.05589586]
+step_number 85
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.50409586 0.0036425  0.0574574 ]
+step_number 86
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.50349769 0.00352481 0.0589444 ]
+step_number 87
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.5028668  0.00341576 0.06036419]
+step_number 88
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.50220858 0.00334492 0.06172146]
+step_number 89
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.50152914 0.00329821 0.06302138]
+step_number 90
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.50083631 0.00327015 0.06427129]
+step_number 91
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.50013684 0.00325343 0.06547761]
+step_number 92
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.4994366  0.00325182 0.0666456 ]
+step_number 93
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49874131 0.00326544 0.06778085]
+step_number 94
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49805554 0.00329423 0.06888825]
+step_number 95
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49738325 0.0033381  0.06997252]
+step_number 96
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49672767 0.00339555 0.07103721]
+step_number 97
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49609212 0.00346594 0.07208643]
+step_number 98
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49547908 0.00354834 0.07312351]
+step_number 99
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49489064 0.00364153 0.07415132]
+step_number 100
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49432849 0.00374423 0.07517241]
+step_number 101
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49379428 0.00385528 0.07618915]
+step_number 102
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49328841 0.00397352 0.07720315]
+step_number 103
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49281658 0.00409748 0.07821777]
+step_number 104
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49238154 0.00422516 0.07923491]
+step_number 105
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49198434 0.00435454 0.08025579]
+step_number 106
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49162548 0.00448383 0.08128134]
+step_number 107
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49130504 0.00461144 0.08231218]
+step_number 108
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49102268 0.004736   0.08334859]
+step_number 109
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49077774 0.00485637 0.08439056]
+step_number 110
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49056923 0.00497157 0.08543782]
+step_number 111
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.4903959  0.00508079 0.08648984]
+step_number 112
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49025626 0.0051834  0.08754589]
+step_number 113
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49014861 0.00527892 0.08860506]
+step_number 114
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.4900711  0.00536699 0.08966629]
+step_number 115
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49002175 0.00544739 0.09072837]
+step_number 116
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.48999848 0.00552003 0.09179005]
+step_number 117
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.48999918 0.00558507 0.09285003]
+step_number 118
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49002167 0.00564202 0.09390678]
+step_number 119
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49006397 0.00569199 0.09495927]
+step_number 120
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49012375 0.00573413 0.09600569]
+step_number 121
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49019916 0.00576959 0.0970451 ]
+step_number 122
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49028823 0.00579907 0.09807683]
+step_number 123
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49038781 0.00582238 0.09910386]
+step_number 124
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49049442 0.00584407 0.10012999]
+step_number 125
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49060567 0.00586521 0.10115018]
+step_number 126
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49072157 0.00588768 0.10215935]
+step_number 127
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49084215 0.0059175  0.10315593]
+step_number 128
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49096636 0.00595307 0.10413924]
+step_number 129
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49109283 0.0059926  0.10510928]
+step_number 130
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49122007 0.00603318 0.10606433]
+step_number 131
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49134733 0.00607484 0.10700411]
+step_number 132
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49147391 0.00611692 0.10792811]
+step_number 133
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49159925 0.00615909 0.108836  ]
+step_number 134
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49172291 0.00620114 0.10972761]
+step_number 135
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49184454 0.00624292 0.11060285]
+step_number 136
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49196384 0.00628435 0.11146171]
+step_number 137
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49208062 0.00632541 0.11230429]
+step_number 138
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49219472 0.00636607 0.11313069]
+step_number 139
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49230602 0.00640635 0.1139411 ]
+step_number 140
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49241445 0.00644623 0.1147357 ]
+step_number 141
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49251998 0.00648575 0.11551475]
+step_number 142
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49262258 0.0065249  0.11627848]
+step_number 143
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49272228 0.00656371 0.11702715]
+step_number 144
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49281908 0.00660217 0.11776104]
+step_number 145
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49291304 0.0066403  0.11848044]
+step_number 146
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49300419 0.00667809 0.11918563]
+step_number 147
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49309261 0.00671554 0.1198769 ]
+step_number 148
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49317834 0.00675263 0.12055453]
+step_number 149
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49326147 0.00678937 0.1212188 ]
+step_number 150
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49334213 0.00682574 0.12187013]
+step_number 151
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49342028 0.00686169 0.12250859]
+step_number 152
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49349608 0.00689727 0.12313457]
+step_number 153
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49356956 0.00693241 0.12374828]
+step_number 154
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49364079 0.00696709 0.12434999]
+step_number 155
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49370985 0.00700142 0.12493995]
+step_number 156
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49377684 0.00703516 0.12551844]
+step_number 157
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49384189 0.00706826 0.12608582]
+step_number 158
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49390498 0.00710083 0.12664216]
+step_number 159
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49396621 0.00713268 0.12718772]
+step_number 160
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49402567 0.00716404 0.12772282]
+step_number 161
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49408342 0.00719478 0.12824767]
+step_number 162
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.4941395  0.00722481 0.12876239]
+step_number 163
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49419402 0.00725406 0.12926724]
+step_number 164
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49424703 0.00728266 0.12976251]
+step_number 165
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49429858 0.00731052 0.13024834]
+step_number 166
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49434871 0.00733747 0.13072482]
+step_number 167
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.4943975  0.00736367 0.13119224]
+step_number 168
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49444507 0.007389   0.1316509 ]
+step_number 169
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.4944914  0.0074134  0.13210082]
+step_number 170
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49453652 0.00743696 0.13254216]
+step_number 171
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49458051 0.0074596  0.13297512]
+step_number 172
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49462345 0.00748136 0.13340002]
+step_number 173
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49466537 0.00750201 0.13381679]
+step_number 174
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.4947063  0.00752169 0.13422571]
+step_number 175
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49474626 0.0075404  0.13462685]
+step_number 176
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49478535 0.00755809 0.13502048]
+step_number 177
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.4948236  0.00757476 0.13540672]
+step_number 178
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49486103 0.00759027 0.13578561]
+step_number 179
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49489765 0.00760485 0.13615737]
+step_number 180
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49493356 0.00761815 0.13652206]
+step_number 181
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49496877 0.00763047 0.13687995]
+step_number 182
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.4950033  0.00764162 0.137231  ]
+step_number 183
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49503722 0.00765156 0.13757548]
+step_number 184
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49507049 0.00766048 0.13791335]
+step_number 185
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49510323 0.00766821 0.13824491]
+step_number 186
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49513542 0.00767474 0.13857015]
+step_number 187
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49516707 0.00768014 0.13888917]
+step_number 188
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49519828 0.00768426 0.13920216]
+step_number 189
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49522899 0.00768737 0.13950919]
+step_number 190
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49525927 0.00768908 0.13981028]
+step_number 191
+lifting Peg
+target_pos: [ 4.99993299e-01 -2.25927207e-05  1.50000000e-01]
+gripper_pos: [0.49528916 0.00768979 0.14010572]
+Reached lift height, holding position
+step_number 192
+Moving peg to slot
+L2 distance for task 3 0.21724259164498655
+step_number 193
+Moving peg to slot
+L2 distance for task 3 0.21684062790063136
+step_number 194
+Moving peg to slot
+L2 distance for task 3 0.21593275329813041
+step_number 195
+Moving peg to slot
+L2 distance for task 3 0.21467729640184555
+step_number 196
+Moving peg to slot
+L2 distance for task 3 0.2131731316517273
+step_number 197
+Moving peg to slot
+L2 distance for task 3 0.2114804338487223
+step_number 198
+Moving peg to slot
+L2 distance for task 3 0.20964207747084646
+step_number 199
+Moving peg to slot
+L2 distance for task 3 0.20768202466040353
+step_number 200
+Moving peg to slot
+L2 distance for task 3 0.20562984341582985
+step_number 201
+Moving peg to slot
+L2 distance for task 3 0.20352106199990339
+step_number 202
+Moving peg to slot
+L2 distance for task 3 0.20136859315897518
+step_number 203
+Moving peg to slot
+L2 distance for task 3 0.19918265613714883
+step_number 204
+Moving peg to slot
+L2 distance for task 3 0.19697244478151002
+step_number 205
+Moving peg to slot
+L2 distance for task 3 0.19474599488789382
+step_number 206
+Moving peg to slot
+L2 distance for task 3 0.19250977586086296
+step_number 207
+Moving peg to slot
+L2 distance for task 3 0.19026949651752376
+step_number 208
+Moving peg to slot
+L2 distance for task 3 0.18803000759333263
+step_number 209
+Moving peg to slot
+L2 distance for task 3 0.18579550376318513
+step_number 210
+Moving peg to slot
+L2 distance for task 3 0.18356936854883293
+step_number 211
+Moving peg to slot
+L2 distance for task 3 0.18135466123648572
+step_number 212
+Moving peg to slot
+L2 distance for task 3 0.17915386311454773
+step_number 213
+Moving peg to slot
+L2 distance for task 3 0.17696915359747004
+step_number 214
+Moving peg to slot
+L2 distance for task 3 0.17480225869505564
+step_number 215
+Moving peg to slot
+L2 distance for task 3 0.17265472216535271
+step_number 216
+Moving peg to slot
+L2 distance for task 3 0.17052767818092643
+step_number 217
+Moving peg to slot
+L2 distance for task 3 0.16842226562516477
+step_number 218
+Moving peg to slot
+L2 distance for task 3 0.1663393293806406
+step_number 219
+Moving peg to slot
+L2 distance for task 3 0.1642794835725107
+step_number 220
+Moving peg to slot
+L2 distance for task 3 0.16224304604282416
+step_number 221
+Moving peg to slot
+L2 distance for task 3 0.1602308076044314
+step_number 222
+Moving peg to slot
+L2 distance for task 3 0.15824265470577645
+step_number 223
+Moving peg to slot
+L2 distance for task 3 0.156279056592832
+step_number 224
+Moving peg to slot
+L2 distance for task 3 0.154339852457319
+step_number 225
+Moving peg to slot
+L2 distance for task 3 0.1524255691496324
+step_number 226
+Moving peg to slot
+L2 distance for task 3 0.1505358091470166
+step_number 227
+Moving peg to slot
+L2 distance for task 3 0.1486705442043387
+step_number 228
+Moving peg to slot
+L2 distance for task 3 0.14682984623896053
+step_number 229
+Moving peg to slot
+L2 distance for task 3 0.14501352984020932
+step_number 230
+Moving peg to slot
+L2 distance for task 3 0.14322143939412935
+step_number 231
+Moving peg to slot
+L2 distance for task 3 0.14145337368946656
+step_number 232
+Moving peg to slot
+L2 distance for task 3 0.13970917995597926
+step_number 233
+Moving peg to slot
+L2 distance for task 3 0.13798858086684254
+step_number 234
+Moving peg to slot
+L2 distance for task 3 0.1362914037035168
+step_number 235
+Moving peg to slot
+L2 distance for task 3 0.13461735557979604
+step_number 236
+Moving peg to slot
+L2 distance for task 3 0.13296614518046818
+step_number 237
+Moving peg to slot
+L2 distance for task 3 0.13133770895619798
+step_number 238
+Moving peg to slot
+L2 distance for task 3 0.12973166481590456
+step_number 239
+Moving peg to slot
+L2 distance for task 3 0.12814768163086615
+step_number 240
+Moving peg to slot
+L2 distance for task 3 0.12658566007654848
+step_number 241
+Moving peg to slot
+L2 distance for task 3 0.12504505148206574
+step_number 242
+Moving peg to slot
+L2 distance for task 3 0.12352586688593327
+step_number 243
+Moving peg to slot
+L2 distance for task 3 0.12202775592158845
+step_number 244
+Moving peg to slot
+L2 distance for task 3 0.12055031173158563
+step_number 245
+Moving peg to slot
+L2 distance for task 3 0.11909338544694584
+step_number 246
+Moving peg to slot
+L2 distance for task 3 0.11765676752405577
+step_number 247
+Moving peg to slot
+L2 distance for task 3 0.11623996718957555
+step_number 248
+Moving peg to slot
+L2 distance for task 3 0.11484286224357161
+step_number 249
+Moving peg to slot
+L2 distance for task 3 0.11346528258796704
+step_number 250
+Moving peg to slot
+L2 distance for task 3 0.11210673843203406
+step_number 251
+Moving peg to slot
+L2 distance for task 3 0.11076706986814777
+step_number 252
+Moving peg to slot
+L2 distance for task 3 0.10944602331977271
+step_number 253
+Moving peg to slot
+L2 distance for task 3 0.10814347727314724
+step_number 254
+Moving peg to slot
+L2 distance for task 3 0.10685897457351513
+step_number 255
+Moving peg to slot
+L2 distance for task 3 0.10559236589932751
+step_number 256
+Moving peg to slot
+L2 distance for task 3 0.1043433120055358
+step_number 257
+Moving peg to slot
+L2 distance for task 3 0.10311164859224808
+step_number 258
+Moving peg to slot
+L2 distance for task 3 0.10189713980148808
+step_number 259
+Moving peg to slot
+L2 distance for task 3 0.10069950719595316
+step_number 260
+Moving peg to slot
+L2 distance for task 3 0.0995185261273301
+step_number 261
+Moving peg to slot
+L2 distance for task 3 0.09835397111900135
+step_number 262
+Moving peg to slot
+L2 distance for task 3 0.09720566301159424
+step_number 263
+Moving peg to slot
+L2 distance for task 3 0.0960733268740859
+step_number 264
+Moving peg to slot
+L2 distance for task 3 0.09495672816235973
+step_number 265
+Moving peg to slot
+L2 distance for task 3 0.09385571215695182
+step_number 266
+Moving peg to slot
+L2 distance for task 3 0.09276988743409019
+step_number 267
+Moving peg to slot
+L2 distance for task 3 0.09169915016053165
+step_number 268
+Moving peg to slot
+L2 distance for task 3 0.09064345703485076
+step_number 269
+Moving peg to slot
+L2 distance for task 3 0.08960237972549684
+step_number 270
+Moving peg to slot
+L2 distance for task 3 0.08857582976024339
+step_number 271
+Moving peg to slot
+L2 distance for task 3 0.08756333302101049
+step_number 272
+Moving peg to slot
+L2 distance for task 3 0.08656510374209074
+step_number 273
+Moving peg to slot
+L2 distance for task 3 0.08558072678156634
+step_number 274
+Moving peg to slot
+L2 distance for task 3 0.08461008565074063
+step_number 275
+Moving peg to slot
+L2 distance for task 3 0.08365285105947279
+step_number 276
+Moving peg to slot
+L2 distance for task 3 0.08270890389018469
+step_number 277
+Moving peg to slot
+L2 distance for task 3 0.08177817607042959
+step_number 278
+Moving peg to slot
+L2 distance for task 3 0.08086032201882516
+step_number 279
+Moving peg to slot
+L2 distance for task 3 0.07995522674098242
+step_number 280
+Moving peg to slot
+L2 distance for task 3 0.079062673682611
+step_number 281
+Moving peg to slot
+L2 distance for task 3 0.07818258045333393
+step_number 282
+Moving peg to slot
+L2 distance for task 3 0.07731463298360466
+step_number 283
+Moving peg to slot
+L2 distance for task 3 0.0764587089722451
+step_number 284
+Moving peg to slot
+L2 distance for task 3 0.07561486572606006
+step_number 285
+Moving peg to slot
+L2 distance for task 3 0.07478263163163842
+step_number 286
+Moving peg to slot
+L2 distance for task 3 0.07396194146663451
+step_number 287
+Moving peg to slot
+L2 distance for task 3 0.07315269148670366
+step_number 288
+Moving peg to slot
+L2 distance for task 3 0.07235473155360446
+step_number 289
+Moving peg to slot
+L2 distance for task 3 0.0715677428831829
+step_number 290
+Moving peg to slot
+L2 distance for task 3 0.07079164218979636
+step_number 291
+Moving peg to slot
+L2 distance for task 3 0.07002647008112428
+step_number 292
+Moving peg to slot
+L2 distance for task 3 0.06927184806364373
+step_number 293
+Moving peg to slot
+L2 distance for task 3 0.06852764665622105
+step_number 294
+Moving peg to slot
+L2 distance for task 3 0.06779389984219472
+step_number 295
+Moving peg to slot
+L2 distance for task 3 0.06707037885669626
+step_number 296
+Moving peg to slot
+L2 distance for task 3 0.06635697980354635
+step_number 297
+Moving peg to slot
+L2 distance for task 3 0.06565328071943788
+step_number 298
+Moving peg to slot
+L2 distance for task 3 0.06495895191325307
+step_number 299
+Moving peg to slot
+L2 distance for task 3 0.0642736504215229
+step_number 300
+Moving peg to slot
+L2 distance for task 3 0.0635973434537503
+step_number 301
+Moving peg to slot
+L2 distance for task 3 0.06292964068073233
+step_number 302
+Moving peg to slot
+L2 distance for task 3 0.06227037340222963
+step_number 303
+Moving peg to slot
+L2 distance for task 3 0.06161962191002827
+step_number 304
+Moving peg to slot
+L2 distance for task 3 0.06097728826253349
+step_number 305
+Moving peg to slot
+L2 distance for task 3 0.06034287093019939
+step_number 306
+Moving peg to slot
+L2 distance for task 3 0.05971658887466406
+step_number 307
+Moving peg to slot
+L2 distance for task 3 0.059098164983748154
+step_number 308
+Moving peg to slot
+L2 distance for task 3 0.05848755689855329
+step_number 309
+Moving peg to slot
+L2 distance for task 3 0.05788461836796795
+step_number 310
+Moving peg to slot
+L2 distance for task 3 0.057289228903113595
+step_number 311
+Moving peg to slot
+L2 distance for task 3 0.05670140381096937
+step_number 312
+Moving peg to slot
+L2 distance for task 3 0.05612094447472884
+step_number 313
+Moving peg to slot
+L2 distance for task 3 0.05554781953982131
+step_number 314
+Moving peg to slot
+L2 distance for task 3 0.05498184035579234
+step_number 315
+Moving peg to slot
+L2 distance for task 3 0.054423013626025016
+step_number 316
+Moving peg to slot
+L2 distance for task 3 0.05387115945542388
+step_number 317
+Moving peg to slot
+L2 distance for task 3 0.05332632264608612
+step_number 318
+Moving peg to slot
+L2 distance for task 3 0.05278823092887506
+step_number 319
+Moving peg to slot
+L2 distance for task 3 0.05225698379605148
+step_number 320
+Moving peg to slot
+L2 distance for task 3 0.05173255898206352
+step_number 321
+Moving peg to slot
+L2 distance for task 3 0.05121459663933686
+step_number 322
+Moving peg to slot
+L2 distance for task 3 0.05070312569200751
+step_number 323
+Moving peg to slot
+L2 distance for task 3 0.05019817430920734
+step_number 324
+Moving peg to slot
+L2 distance for task 3 0.04969952194479372
+step_number 325
+Moving peg to slot
+L2 distance for task 3 0.04920717558215284
+step_number 326
+Moving peg to slot
+L2 distance for task 3 0.04872095587302108
+step_number 327
+Moving peg to slot
+L2 distance for task 3 0.04824102723358786
+step_number 328
+Moving peg to slot
+L2 distance for task 3 0.04776699947934503
+step_number 329
+Moving peg to slot
+L2 distance for task 3 0.047298996320593714
+step_number 330
+Moving peg to slot
+L2 distance for task 3 0.046836976034046615
+step_number 331
+Moving peg to slot
+L2 distance for task 3 0.04638072177420568
+step_number 332
+Moving peg to slot
+L2 distance for task 3 0.04593023302172449
+step_number 333
+Moving peg to slot
+L2 distance for task 3 0.04548548151379234
+step_number 334
+Moving peg to slot
+L2 distance for task 3 0.0450463409651547
+step_number 335
+Moving peg to slot
+L2 distance for task 3 0.04461277659388089
+step_number 336
+Moving peg to slot
+L2 distance for task 3 0.04418471624860406
+step_number 337
+Moving peg to slot
+L2 distance for task 3 0.04376226377563108
+step_number 338
+Moving peg to slot
+L2 distance for task 3 0.04334515112693479
+step_number 339
+Moving peg to slot
+L2 distance for task 3 0.042932984215977466
+step_number 340
+Moving peg to slot
+L2 distance for task 3 0.04252619781763902
+step_number 341
+Moving peg to slot
+L2 distance for task 3 0.04212407258596649
+step_number 342
+Moving peg to slot
+L2 distance for task 3 0.04172678170073818
+step_number 343
+Moving peg to slot
+L2 distance for task 3 0.04133426763608379
+step_number 344
+Moving peg to slot
+L2 distance for task 3 0.04094613888453354
+step_number 345
+Moving peg to slot
+L2 distance for task 3 0.04056238065977838
+step_number 346
+Moving peg to slot
+L2 distance for task 3 0.040183051787175954
+step_number 347
+Moving peg to slot
+L2 distance for task 3 0.0398077232935179
+step_number 348
+Moving peg to slot
+L2 distance for task 3 0.039436639151730415
+step_number 349
+Moving peg to slot
+L2 distance for task 3 0.03906988638761017
+step_number 350
+Moving peg to slot
+L2 distance for task 3 0.03870708841810445
+step_number 351
+Moving peg to slot
+L2 distance for task 3 0.038348332246802425
+step_number 352
+Moving peg to slot
+L2 distance for task 3 0.037993717154276054
+step_number 353
+Moving peg to slot
+L2 distance for task 3 0.037643050453033865
+step_number 354
+Moving peg to slot
+L2 distance for task 3 0.037296215092234374
+step_number 355
+Moving peg to slot
+L2 distance for task 3 0.03695323406726214
+step_number 356
+Moving peg to slot
+L2 distance for task 3 0.03661428420203817
+step_number 357
+Moving peg to slot
+L2 distance for task 3 0.03627901030957462
+step_number 358
+Moving peg to slot
+L2 distance for task 3 0.03594744260181649
+step_number 359
+Moving peg to slot
+L2 distance for task 3 0.03561962711464777
+step_number 360
+Moving peg to slot
+L2 distance for task 3 0.035295488970827224
+step_number 361
+Moving peg to slot
+L2 distance for task 3 0.03497498126719913
+step_number 362
+Moving peg to slot
+L2 distance for task 3 0.03465804872532919
+step_number 363
+Moving peg to slot
+L2 distance for task 3 0.03434465988382444
+step_number 364
+Moving peg to slot
+L2 distance for task 3 0.03403480088184013
+step_number 365
+Moving peg to slot
+L2 distance for task 3 0.03372831759917455
+step_number 366
+Moving peg to slot
+L2 distance for task 3 0.033425435871084146
+step_number 367
+Moving peg to slot
+L2 distance for task 3 0.033125822233405454
+step_number 368
+Moving peg to slot
+L2 distance for task 3 0.032829548867768656
+step_number 369
+Moving peg to slot
+L2 distance for task 3 0.03253675182779659
+step_number 370
+Moving peg to slot
+L2 distance for task 3 0.032247096925665894
+step_number 371
+Moving peg to slot
+L2 distance for task 3 0.0319607675063308
+step_number 372
+Moving peg to slot
+L2 distance for task 3 0.031677596091018834
+step_number 373
+Moving peg to slot
+L2 distance for task 3 0.031397635398557125
+step_number 374
+Moving peg to slot
+L2 distance for task 3 0.031120776196939634
+step_number 375
+Moving peg to slot
+L2 distance for task 3 0.030847084434713217
+step_number 376
+Moving peg to slot
+L2 distance for task 3 0.03057650898134737
+step_number 377
+Moving peg to slot
+L2 distance for task 3 0.030308868735168366
+step_number 378
+Moving peg to slot
+L2 distance for task 3 0.030044230109486293
+step_number 379
+Moving peg to slot
+L2 distance for task 3 0.029782735463967515
+step_number 380
+Moving peg to slot
+L2 distance for task 3 0.029524078773344824
+step_number 381
+Moving peg to slot
+L2 distance for task 3 0.02926823077380835
+step_number 382
+Moving peg to slot
+L2 distance for task 3 0.02901538524984515
+step_number 383
+Moving peg to slot
+L2 distance for task 3 0.02876535957227986
+step_number 384
+Moving peg to slot
+L2 distance for task 3 0.028518152665637765
+step_number 385
+Moving peg to slot
+L2 distance for task 3 0.028273762795994258
+step_number 386
+Moving peg to slot
+L2 distance for task 3 0.028032181766796605
+step_number 387
+Moving peg to slot
+L2 distance for task 3 0.02779321431882257
+step_number 388
+Moving peg to slot
+L2 distance for task 3 0.027557041746465793
+step_number 389
+Moving peg to slot
+L2 distance for task 3 0.027323440810026734
+step_number 390
+Moving peg to slot
+L2 distance for task 3 0.027092461426669268
+step_number 391
+Moving peg to slot
+L2 distance for task 3 0.0268641828709826
+step_number 392
+Moving peg to slot
+L2 distance for task 3 0.026638504786119097
+step_number 393
+Moving peg to slot
+L2 distance for task 3 0.026415294491867206
+step_number 394
+Moving peg to slot
+L2 distance for task 3 0.02619470956851994
+step_number 395
+Moving peg to slot
+L2 distance for task 3 0.02597660073611291
+step_number 396
+Moving peg to slot
+L2 distance for task 3 0.025760933311737986
+step_number 397
+Moving peg to slot
+L2 distance for task 3 0.02554763578921498
+step_number 398
+Moving peg to slot
+L2 distance for task 3 0.02533690813073344
+step_number 399
+Moving peg to slot
+L2 distance for task 3 0.02512848454872761
+step_number 400
+Moving peg to slot
+L2 distance for task 3 0.024922438872178463
+step_number 401
+Moving peg to slot
+L2 distance for task 3 0.02471877142312378
+step_number 402
+Moving peg to slot
+L2 distance for task 3 0.024517464926021915
+step_number 403
+Moving peg to slot
+L2 distance for task 3 0.024318349671825182
+step_number 404
+Moving peg to slot
+L2 distance for task 3 0.024121580024339794
+step_number 405
+Moving peg to slot
+L2 distance for task 3 0.02392697829415111
+step_number 406
+Moving peg to slot
+L2 distance for task 3 0.023734718876206498
+step_number 407
+Moving peg to slot
+L2 distance for task 3 0.02354446481370245
+step_number 408
+Moving peg to slot
+L2 distance for task 3 0.023356506416377005
+step_number 409
+Moving peg to slot
+L2 distance for task 3 0.02317072184839966
+step_number 410
+Moving peg to slot
+L2 distance for task 3 0.02298696368227431
+step_number 411
+Moving peg to slot
+L2 distance for task 3 0.022805351080974007
+step_number 412
+Moving peg to slot
+L2 distance for task 3 0.022625841702187344
+step_number 413
+Moving peg to slot
+L2 distance for task 3 0.022448387424829047
+step_number 414
+Moving peg to slot
+L2 distance for task 3 0.0222729676151439
+step_number 415
+Moving peg to slot
+L2 distance for task 3 0.022099551607840946
+step_number 416
+Moving peg to slot
+L2 distance for task 3 0.02192810214016139
+step_number 417
+Moving peg to slot
+L2 distance for task 3 0.02175866737123093
+step_number 418
+Moving peg to slot
+L2 distance for task 3 0.021591123347493253
+step_number 419
+Moving peg to slot
+L2 distance for task 3 0.021425519580216816
+step_number 420
+Moving peg to slot
+L2 distance for task 3 0.021261823095706577
+step_number 421
+Moving peg to slot
+L2 distance for task 3 0.021100040533689125
+step_number 422
+Moving peg to slot
+L2 distance for task 3 0.020940114244341817
+step_number 423
+Moving peg to slot
+L2 distance for task 3 0.020782033447570254
+step_number 424
+Moving peg to slot
+L2 distance for task 3 0.020625789595222894
+step_number 425
+Moving peg to slot
+L2 distance for task 3 0.020471324446758407
+step_number 426
+Moving peg to slot
+L2 distance for task 3 0.02031863278557494
+step_number 427
+Moving peg to slot
+L2 distance for task 3 0.02016777141655419
+step_number 428
+Moving peg to slot
+L2 distance for task 3 0.020018583769742478
+step_number 429
+Moving peg to slot
+L2 distance for task 3 0.019871099723077136
+step_number 430
+Moving peg to slot
+L2 distance for task 3 0.019725374926773485
+step_number 431
+Moving peg to slot
+L2 distance for task 3 0.019581344874548223
+step_number 432
+Moving peg to slot
+L2 distance for task 3 0.01943899088639905
+step_number 433
+Moving peg to slot
+L2 distance for task 3 0.019298305162197084
+step_number 434
+Moving peg to slot
+L2 distance for task 3 0.019159204730241488
+step_number 435
+Moving peg to slot
+L2 distance for task 3 0.019021768177932427
+step_number 436
+Moving peg to slot
+L2 distance for task 3 0.018885785254095115
+step_number 437
+Moving peg to slot
+L2 distance for task 3 0.018751586132503398
+step_number 438
+Moving peg to slot
+L2 distance for task 3 0.01861892911166493
+step_number 439
+Moving peg to slot
+L2 distance for task 3 0.018487784456726202
+step_number 440
+Moving peg to slot
+L2 distance for task 3 0.01835812161999416
+step_number 441
+Moving peg to slot
+L2 distance for task 3 0.018230065417498286
+step_number 442
+Moving peg to slot
+L2 distance for task 3 0.018103392782163403
+step_number 443
+Moving peg to slot
+L2 distance for task 3 0.017978322883017754
+step_number 444
+Moving peg to slot
+L2 distance for task 3 0.017854670649506323
+step_number 445
+Moving peg to slot
+L2 distance for task 3 0.017732462822005867
+step_number 446
+Moving peg to slot
+L2 distance for task 3 0.01761171175242798
+step_number 447
+Moving peg to slot
+L2 distance for task 3 0.017492413413785823
+step_number 448
+Moving peg to slot
+L2 distance for task 3 0.017374508196967235
+step_number 449
+Moving peg to slot
+L2 distance for task 3 0.017257942805939275
+step_number 450
+Moving peg to slot
+L2 distance for task 3 0.01714279375817152
+step_number 451
+Moving peg to slot
+L2 distance for task 3 0.01702900974030851
+step_number 452
+Moving peg to slot
+L2 distance for task 3 0.016916522058168414
+step_number 453
+Moving peg to slot
+L2 distance for task 3 0.01680536719923794
+step_number 454
+Moving peg to slot
+L2 distance for task 3 0.01669565913527799
+step_number 455
+Moving peg to slot
+L2 distance for task 3 0.01658711298902033
+step_number 456
+Moving peg to slot
+L2 distance for task 3 0.016480002098097628
+step_number 457
+Moving peg to slot
+L2 distance for task 3 0.016374048072591744
+step_number 458
+Moving peg to slot
+L2 distance for task 3 0.016269362734180046
+step_number 459
+Moving peg to slot
+L2 distance for task 3 0.016166048296805145
+step_number 460
+Moving peg to slot
+L2 distance for task 3 0.016063911209081565
+step_number 461
+Moving peg to slot
+L2 distance for task 3 0.015962945038244847
+step_number 462
+Moving peg to slot
+L2 distance for task 3 0.01586320969867873
+step_number 463
+Moving peg to slot
+L2 distance for task 3 0.01576476666677864
+step_number 464
+Moving peg to slot
+L2 distance for task 3 0.01566741917297171
+step_number 465
+Moving peg to slot
+L2 distance for task 3 0.01557129137480575
+step_number 466
+Moving peg to slot
+L2 distance for task 3 0.015476293029546881
+step_number 467
+Moving peg to slot
+L2 distance for task 3 0.015382459624113198
+step_number 468
+Moving peg to slot
+L2 distance for task 3 0.015289702038025599
+step_number 469
+Moving peg to slot
+L2 distance for task 3 0.015198045246562908
+step_number 470
+Moving peg to slot
+L2 distance for task 3 0.015107612774043025
+step_number 471
+Moving peg to slot
+L2 distance for task 3 0.0150181759794406
+step_number 472
+Moving peg to slot
+L2 distance for task 3 0.014929816594903339
+step_number 473
+Moving peg to slot
+L2 distance for task 3 0.014842553956386045
+step_number 474
+Moving peg to slot
+L2 distance for task 3 0.01475627709331319
+step_number 475
+Moving peg to slot
+L2 distance for task 3 0.01467117436588871
+step_number 476
+Moving peg to slot
+L2 distance for task 3 0.014587003982941308
+step_number 477
+Moving peg to slot
+L2 distance for task 3 0.01450384822421293
+step_number 478
+Moving peg to slot
+L2 distance for task 3 0.014421662148132548
+step_number 479
+Moving peg to slot
+L2 distance for task 3 0.014340559439192652
+step_number 480
+Moving peg to slot
+L2 distance for task 3 0.01426035145008904
+step_number 481
+Moving peg to slot
+L2 distance for task 3 0.014181118041803801
+step_number 482
+Moving peg to slot
+L2 distance for task 3 0.014102870688055592
+step_number 483
+Moving peg to slot
+L2 distance for task 3 0.014025578044370216
+step_number 484
+Moving peg to slot
+L2 distance for task 3 0.01394915035269583
+step_number 485
+Moving peg to slot
+L2 distance for task 3 0.013873745123761697
+step_number 486
+Moving peg to slot
+L2 distance for task 3 0.013799167435052901
+step_number 487
+Moving peg to slot
+L2 distance for task 3 0.01372552648104972
+step_number 488
+Moving peg to slot
+L2 distance for task 3 0.01365278554696286
+step_number 489
+Moving peg to slot
+L2 distance for task 3 0.013580899849715706
+step_number 490
+Moving peg to slot
+L2 distance for task 3 0.01350985697718784
+step_number 491
+Moving peg to slot
+L2 distance for task 3 0.01343970238296061
+step_number 492
+Moving peg to slot
+L2 distance for task 3 0.013370348082926871
+step_number 493
+Moving peg to slot
+L2 distance for task 3 0.013301884363813183
+step_number 494
+Moving peg to slot
+L2 distance for task 3 0.013234118417020492
+step_number 495
+Moving peg to slot
+L2 distance for task 3 0.013167163102456206
+step_number 496
+Bringing closer to placing
+step_number 497
+Bringing closer to placing
+step_number 498
+Bringing closer to placing
+step_number 499
+Bringing closer to placing
+step_number 500
+Bringing closer to placing
+step_number 501
+Bringing closer to placing
+step_number 502
+Bringing closer to placing
+step_number 503
+Bringing closer to placing
+step_number 504
+Bringing closer to placing
+step_number 505
+Bringing closer to placing
+step_number 506
+Bringing closer to placing
+step_number 507
+Bringing closer to placing
+step_number 508
+Bringing closer to placing
+step_number 509
+Bringing closer to placing
+step_number 510
+Bringing closer to placing
+step_number 511
+Bringing closer to placing
+step_number 512
+Bringing closer to placing
+step_number 513
+Bringing closer to placing
+step_number 514
+Bringing closer to placing
+step_number 515
+Bringing closer to placing
+step_number 516
+Bringing closer to placing
+step_number 517
+Bringing closer to placing
+step_number 518
+Bringing closer to placing
+step_number 519
+Bringing closer to placing
+step_number 520
+Bringing closer to placing
+step_number 521
+Bringing closer to placing
+step_number 522
+Bringing closer to placing
+step_number 523
+Bringing closer to placing
+step_number 524
+Bringing closer to placing
+step_number 525
+Bringing closer to placing
+step_number 526
+Bringing closer to placing
+step_number 527
+Bringing closer to placing
+step_number 528
+Bringing closer to placing
+step_number 529
+Bringing closer to placing
+step_number 530
+Bringing closer to placing
+step_number 531
+Bringing closer to placing
+step_number 532
+Bringing closer to placing
+step_number 533
+Bringing closer to placing
+step_number 534
+Bringing closer to placing
+step_number 535
+Bringing closer to placing
+step_number 536
+Bringing closer to placing
+step_number 537
+Bringing closer to placing
+step_number 538
+Bringing closer to placing
+step_number 539
+Bringing closer to placing
+step_number 540
+Bringing closer to placing
+step_number 541
+Bringing closer to placing
+step_number 542
+Bringing closer to placing
+step_number 543
+Bringing closer to placing
+step_number 544
+Bringing closer to placing
+step_number 545
+Bringing closer to placing
+step_number 546
+Bringing closer to placing
+step_number 547
+Bringing closer to placing
+step_number 548
+Bringing closer to placing
+step_number 549
+Bringing closer to placing
+step_number 550
+Bringing closer to placing
+step_number 551
+Bringing closer to placing
+step_number 552
+Bringing closer to placing
+step_number 553
+Bringing closer to placing
+step_number 554
+Bringing closer to placing
+step_number 555
+Bringing closer to placing
+step_number 556
+Bringing closer to placing
+step_number 557
+Bringing closer to placing
+step_number 558
+Bringing closer to placing
+step_number 559
+Bringing closer to placing
+step_number 560
+Bringing closer to placing
+step_number 561
+Bringing closer to placing
+step_number 562
+Bringing closer to placing
+step_number 563
+Bringing closer to placing
+step_number 564
+Bringing closer to placing
+step_number 565
+Bringing closer to placing
+step_number 566
+Bringing closer to placing
+step_number 567
+Bringing closer to placing
+step_number 568
+Bringing closer to placing
+step_number 569
+Bringing closer to placing
+step_number 570
+Bringing closer to placing
+step_number 571
+Bringing closer to placing
+Reached lift height, holding position
+step_number 572
+Final Subtask
+ori_error: 1.3889117838735026
+step_number 573
+Final Subtask
+ori_error: 1.389504304128709
+step_number 574
+Final Subtask
+ori_error: 1.3960354954577792
+step_number 575
+Final Subtask
+ori_error: 1.4033073665977227
+step_number 576
+Final Subtask
+ori_error: 1.4108011687870854
+step_number 577
+Final Subtask
+ori_error: 1.4184311917283807
+step_number 578
+Final Subtask
+ori_error: 1.4261873164042276
+step_number 579
+Final Subtask
+ori_error: 1.4340711946414282
+step_number 580
+Final Subtask
+ori_error: 1.4420844359637714
+step_number 581
+Final Subtask
+ori_error: 1.4502242732288664
+step_number 582
+Final Subtask
+ori_error: 1.4584633342192648
+step_number 583
+Final Subtask
+ori_error: 1.4667810286372784
+step_number 584
+Final Subtask
+ori_error: 1.475177289914568
+step_number 585
+Final Subtask
+ori_error: 1.4836542344947665
+step_number 586
+Final Subtask
+ori_error: 1.4922143084688293
+step_number 587
+Final Subtask
+ori_error: 1.500858260254677
+Reached target orientation — holding steady
+step_number 588
+Final Subtask
+ori_error: 1.5057092692485021
+Reached target orientation — holding steady
+step_number 589
+Final Subtask
+ori_error: 1.5078431336110307
+Reached target orientation — holding steady
+step_number 590
+Final Subtask
+ori_error: 1.5093911029369145
+Reached target orientation — holding steady
+step_number 591
+Final Subtask
+ori_error: 1.5106198277791227
+Reached target orientation — holding steady
+step_number 592
+Final Subtask
+ori_error: 1.5116118323959806
+Reached target orientation — holding steady
+step_number 593
+Final Subtask
+ori_error: 1.5124095658420718
+Reached target orientation — holding steady
+step_number 594
+Final Subtask
+ori_error: 1.513044429394914
+Reached target orientation — holding steady
+step_number 595
+Final Subtask
+ori_error: 1.512848532531504
+Reached target orientation — holding steady
+step_number 596
+Final Subtask
+ori_error: 1.5122759712524516
+Reached target orientation — holding steady
+step_number 597
+Final Subtask
+ori_error: 1.5120719547128347
+Reached target orientation — holding steady
+step_number 598
+Final Subtask
+ori_error: 1.5120331046971092
+Reached target orientation — holding steady
+step_number 599
+Final Subtask
+ori_error: 1.51204928307058
+Reached target orientation — holding steady
+step_number 600
+Final Subtask
+ori_error: 1.512089733763078
+Reached target orientation — holding steady
+step_number 601
+Final Subtask
+ori_error: 1.5121478067901946
+Reached target orientation — holding steady
+step_number 602
+Final Subtask
+ori_error: 1.512211062037606
+Reached target orientation — holding steady
+step_number 603
+Final Subtask
+ori_error: 1.5122829566951368
+Reached target orientation — holding steady
+step_number 604
+Final Subtask
+ori_error: 1.512350852656948
+Reached target orientation — holding steady
+step_number 605
+Final Subtask
+ori_error: 1.5124290537852627
+Reached target orientation — holding steady
+step_number 606
+Final Subtask
+ori_error: 1.512504147938097
+Reached target orientation — holding steady
+step_number 607
+Final Subtask
+ori_error: 1.5125834693526352
+Reached target orientation — holding steady
+step_number 608
+Final Subtask
+ori_error: 1.5126547102219887
+Reached target orientation — holding steady
+step_number 609
+Final Subtask
+ori_error: 1.5127392460813323
+Reached target orientation — holding steady
+step_number 610
+Final Subtask
+ori_error: 1.512816591908294
+Reached target orientation — holding steady
+step_number 611
+Final Subtask
+ori_error: 1.5128928983599452
+Reached target orientation — holding steady
+step_number 612
+Final Subtask
+ori_error: 1.5129653186847432
+Reached target orientation — holding steady
+step_number 613
+Final Subtask
+ori_error: 1.5130388923895544
+Reached target orientation — holding steady
+step_number 614
+Final Subtask
+ori_error: 1.51311236908474
+Reached target orientation — holding steady
+step_number 615
+Final Subtask
+ori_error: 1.5131870736230821
+Reached target orientation — holding steady
+step_number 616
+Final Subtask
+ori_error: 1.5132599222966918
+Reached target orientation — holding steady
+step_number 617
+Final Subtask
+ori_error: 1.5133360808407794
+Reached target orientation — holding steady
+step_number 618
+Final Subtask
+ori_error: 1.5134138084599373
+Reached target orientation — holding steady
+step_number 619
+Final Subtask
+ori_error: 1.513486294569372
+Reached target orientation — holding steady
+step_number 620
+Final Subtask
+ori_error: 1.5135580278293401
+Reached target orientation — holding steady
+step_number 621
+Final Subtask
+ori_error: 1.5136315429935134
+Reached target orientation — holding steady
+step_number 622
+Final Subtask
+ori_error: 1.5137041677705836
+Reached target orientation — holding steady
+step_number 623
+Final Subtask
+ori_error: 1.513779790633281
+Reached target orientation — holding steady
+step_number 624
+Final Subtask
+ori_error: 1.5138527131009034
+Reached target orientation — holding steady
+step_number 625
+Final Subtask
+ori_error: 1.5139228907852693
+Reached target orientation — holding steady
+step_number 626
+Final Subtask
+ori_error: 1.513990156543528
+Reached target orientation — holding steady
+step_number 627
+Final Subtask
+ori_error: 1.5140611108048834
+Reached target orientation — holding steady
+step_number 628
+Final Subtask
+ori_error: 1.5141290034563448
+Reached target orientation — holding steady
+step_number 629
+Final Subtask
+ori_error: 1.5141983002450603
+Reached target orientation — holding steady
+step_number 630
+Final Subtask
+ori_error: 1.5142696265226898
+Reached target orientation — holding steady
+step_number 631
+Final Subtask
+ori_error: 1.5143339561537255
+Reached target orientation — holding steady
+step_number 632
+Final Subtask
+ori_error: 1.5144034245551676
+Reached target orientation — holding steady
+step_number 633
+Final Subtask
+ori_error: 1.5144715524703902
+Reached target orientation — holding steady
+step_number 634
+Final Subtask
+ori_error: 1.5145360121719973
+Reached target orientation — holding steady
+step_number 635
+Final Subtask
+ori_error: 1.5146052537650416
+Reached target orientation — holding steady
+step_number 636
+Final Subtask
+ori_error: 1.5146700767409473
+Reached target orientation — holding steady
+step_number 637
+Final Subtask
+ori_error: 1.5147332466130683
+Reached target orientation — holding steady
+step_number 638
+Final Subtask
+ori_error: 1.5148012407245175
+Reached target orientation — holding steady
+step_number 639
+Final Subtask
+ori_error: 1.514867645377886
+Reached target orientation — holding steady
+step_number 640
+Final Subtask
+ori_error: 1.5149346456426844
+Reached target orientation — holding steady
+step_number 641
+Final Subtask
+ori_error: 1.5149998609775919
+Reached target orientation — holding steady
+step_number 642
+Final Subtask
+ori_error: 1.5150635797076009
+Reached target orientation — holding steady
+step_number 643
+Final Subtask
+ori_error: 1.5151289147856435
+Reached target orientation — holding steady
+step_number 644
+Final Subtask
+ori_error: 1.5151927699512278
+Reached target orientation — holding steady
+step_number 645
+Final Subtask
+ori_error: 1.5152553659529597
+Reached target orientation — holding steady
+step_number 646
+Final Subtask
+ori_error: 1.515314826819382
+Reached target orientation — holding steady
+step_number 647
+Final Subtask
+ori_error: 1.5153723273704753
+Reached target orientation — holding steady
+step_number 648
+Final Subtask
+ori_error: 1.5154329068001544
+Reached target orientation — holding steady
+step_number 649
+Final Subtask
+ori_error: 1.515488893418883
+Reached target orientation — holding steady
+step_number 650
+Final Subtask
+ori_error: 1.5155539950376855
+Reached target orientation — holding steady
+step_number 651
+Final Subtask
+ori_error: 1.5156110418643853
+Reached target orientation — holding steady
+step_number 652
+Final Subtask
+ori_error: 1.5156719271028805
+Reached target orientation — holding steady
+step_number 653
+Final Subtask
+ori_error: 1.5157274290933072
+Reached target orientation — holding steady
+step_number 654
+Final Subtask
+ori_error: 1.5157868799729037
+Reached target orientation — holding steady
+step_number 655
+Final Subtask
+ori_error: 1.515844830775686
+Reached target orientation — holding steady
+step_number 656
+Final Subtask
+ori_error: 1.5158984429233875
+Reached target orientation — holding steady
+step_number 657
+Final Subtask
+ori_error: 1.5159583806320298
+Reached target orientation — holding steady
+step_number 658
+Final Subtask
+ori_error: 1.5160158041679561
+Reached target orientation — holding steady
+step_number 659
+Final Subtask
+ori_error: 1.516030013498251
+Reached target orientation — holding steady
+step_number 660
+Final Subtask
+ori_error: 1.5162607020853784
+Reached target orientation — holding steady
+step_number 661
+Final Subtask
+ori_error: 1.516950070395018
+Reached target orientation — holding steady
+step_number 662
+Final Subtask
+ori_error: 1.5169753222218572
+Reached target orientation — holding steady
+step_number 663
+Final Subtask
+ori_error: 1.516712307076095
+Reached target orientation — holding steady
+step_number 664
+Final Subtask
+ori_error: 1.5165597260536317
+Reached target orientation — holding steady
+step_number 665
+Final Subtask
+ori_error: 1.5164878238003061
+Reached target orientation — holding steady
+step_number 666
+Final Subtask
+ori_error: 1.5164539450714467
+Reached target orientation — holding steady
+step_number 667
+Final Subtask
+ori_error: 1.5164353268394433
+Reached target orientation — holding steady
+step_number 668
+Final Subtask
+ori_error: 1.5164214646833805
+Reached target orientation — holding steady
+step_number 669
+Final Subtask
+ori_error: 1.5164094529673693
+Reached target orientation — holding steady
+step_number 670
+Final Subtask
+ori_error: 1.516404313433557
+Reached target orientation — holding steady
+step_number 671
+Final Subtask
+ori_error: 1.5163980081466109
+Reached target orientation — holding steady
+step_number 672
+Final Subtask
+ori_error: 1.5163918162234888
+Reached target orientation — holding steady
+step_number 673
+Final Subtask
+ori_error: 1.516387299040935
+Reached target orientation — holding steady
+step_number 674
+Final Subtask
+ori_error: 1.5163823927686428
+Reached target orientation — holding steady
+step_number 675
+Final Subtask
+ori_error: 1.5163734503534791
+Reached target orientation — holding steady
+step_number 676
+Final Subtask
+ori_error: 1.5163663358276813
+Reached target orientation — holding steady
+step_number 677
+Final Subtask
+ori_error: 1.5163592150676681
+Reached target orientation — holding steady
+step_number 678
+Final Subtask
+ori_error: 1.5163515725963737
+Reached target orientation — holding steady
+step_number 679
+Final Subtask
+ori_error: 1.5163434202373176
+Reached target orientation — holding steady
+step_number 680
+Final Subtask
+ori_error: 1.5163341381956925
+Reached target orientation — holding steady
+step_number 681
+Final Subtask
+ori_error: 1.5163236186841982
+Reached target orientation — holding steady
+step_number 682
+Final Subtask
+ori_error: 1.5163234287282943
+Reached target orientation — holding steady
+step_number 683
+Final Subtask
+ori_error: 1.5163166660243685
+Reached target orientation — holding steady
+step_number 684
+Final Subtask
+ori_error: 1.516309855239599
+Reached target orientation — holding steady
+step_number 685
+Final Subtask
+ori_error: 1.5163101369955203
+Reached target orientation — holding steady
+step_number 686
+Final Subtask
+ori_error: 1.516297183892882
+Reached target orientation — holding steady
+step_number 687
+Final Subtask
+ori_error: 1.5162886377269231
+Reached target orientation — holding steady
+step_number 688
+Final Subtask
+ori_error: 1.5162892344027483
+Reached target orientation — holding steady
+step_number 689
+Final Subtask
+ori_error: 1.5162837346228106
+Reached target orientation — holding steady
+step_number 690
+Final Subtask
+ori_error: 1.516282379553171
+Reached target orientation — holding steady
+step_number 691
+Final Subtask
+ori_error: 1.5162778061119675
+Reached target orientation — holding steady
+step_number 692
+Final Subtask
+ori_error: 1.5162682590730112
+Reached target orientation — holding steady
+step_number 693
+Final Subtask
+ori_error: 1.5162633955837288
+Reached target orientation — holding steady
+step_number 694
+Final Subtask
+ori_error: 1.5162584597284374
+Reached target orientation — holding steady
+step_number 695
+Final Subtask
+ori_error: 1.5162505706064495
+Reached target orientation — holding steady
+step_number 696
+Final Subtask
+ori_error: 1.5162495138393646
+Reached target orientation — holding steady
+step_number 697
+Final Subtask
+ori_error: 1.516239939854336
+Reached target orientation — holding steady
+step_number 698
+Final Subtask
+ori_error: 1.5162319403204039
+Reached target orientation — holding steady
+step_number 699
+Final Subtask
+ori_error: 1.5162287422045924
+Reached target orientation — holding steady
+step_number 700
+Final Subtask
+ori_error: 1.5162300967175117
+Reached target orientation — holding steady
+step_number 701
+Final Subtask
+ori_error: 1.516224291053386
+Reached target orientation — holding steady
+step_number 702
+Final Subtask
+ori_error: 1.5162171515250535
+Reached target orientation — holding steady
+step_number 703
+Final Subtask
+ori_error: 1.5162092753385292
+Reached target orientation — holding steady
+step_number 704
+Final Subtask
+ori_error: 1.5162073839574794
+Reached target orientation — holding steady
+step_number 705
+Final Subtask
+ori_error: 1.5161882350011633
+Reached target orientation — holding steady
+step_number 706
+Final Subtask
+ori_error: 1.516177228858129
+Reached target orientation — holding steady
+step_number 707
+Final Subtask
+ori_error: 1.516171777585442
+Reached target orientation — holding steady
+step_number 708
+Final Subtask
+ori_error: 1.5161688949703134
+Reached target orientation — holding steady
+step_number 709
+Final Subtask
+ori_error: 1.516160168042287
+Reached target orientation — holding steady
+step_number 710
+Final Subtask
+ori_error: 1.5161605458097152
+Reached target orientation — holding steady
+step_number 711
+Final Subtask
+ori_error: 1.5161495350450689
+Reached target orientation — holding steady
+step_number 712
+Final Subtask
+ori_error: 1.5161470272029904
+Reached target orientation — holding steady
+step_number 713
+Final Subtask
+ori_error: 1.5161504527483185
+Reached target orientation — holding steady
+step_number 714
+Final Subtask
+ori_error: 1.5161537209238993
+Reached target orientation — holding steady
+step_number 715
+Final Subtask
+ori_error: 1.5161475006115843
+Reached target orientation — holding steady
+step_number 716
+Final Subtask
+ori_error: 1.5161386663740715
+Reached target orientation — holding steady
+step_number 717
+Final Subtask
+ori_error: 1.5161330566882198
+Reached target orientation — holding steady
+step_number 718
+Final Subtask
+ori_error: 1.5161329256947012
+Reached target orientation — holding steady
+step_number 719
+Final Subtask
+ori_error: 1.516125190295058
+Reached target orientation — holding steady
+step_number 720
+Final Subtask
+ori_error: 1.5161246894270028
+Reached target orientation — holding steady
+step_number 721
+Final Subtask
+ori_error: 1.5161208900095688
+Reached target orientation — holding steady
+step_number 722
+Final Subtask
+ori_error: 1.5161299385299871
+Reached target orientation — holding steady
+step_number 723
+Final Subtask
+ori_error: 1.5161270043992168
+Reached target orientation — holding steady
+step_number 724
+Final Subtask
+ori_error: 1.5161171263399358
+Reached target orientation — holding steady
+step_number 725
+Final Subtask
+ori_error: 1.516123107868212
+Reached target orientation — holding steady
+step_number 726
+Final Subtask
+ori_error: 1.5161234849378447
+Reached target orientation — holding steady
+step_number 727
+Final Subtask
+ori_error: 1.5161205095162822
+Reached target orientation — holding steady
+step_number 728
+Final Subtask
+ori_error: 1.516117211539443
+Reached target orientation — holding steady
+step_number 729
+Final Subtask
+ori_error: 1.5161147678529614
+Reached target orientation — holding steady
+step_number 730
+Final Subtask
+ori_error: 1.5161139175932359
+Reached target orientation — holding steady
+step_number 731
+Final Subtask
+ori_error: 1.516119239330337
+Reached target orientation — holding steady
+step_number 732
+Final Subtask
+ori_error: 1.5161306215972732
+Reached target orientation — holding steady
+step_number 733
+Final Subtask
+ori_error: 1.5161368307878496
+Reached target orientation — holding steady
+step_number 734
+Final Subtask
+ori_error: 1.5161447142799456
+Reached target orientation — holding steady
+step_number 735
+Final Subtask
+ori_error: 1.5161405763842808
+Reached target orientation — holding steady
+step_number 736
+Final Subtask
+ori_error: 1.5161495604732689
+Reached target orientation — holding steady
+step_number 737
+Final Subtask
+ori_error: 1.5161649063420255
+Reached target orientation — holding steady
+step_number 738
+Final Subtask
+ori_error: 1.5161691129262835
+Reached target orientation — holding steady
+step_number 739
+Final Subtask
+ori_error: 1.516165275468428
+Reached target orientation — holding steady
+step_number 740
+Final Subtask
+ori_error: 1.516160337706767
+Reached target orientation — holding steady
+step_number 741
+Final Subtask
+ori_error: 1.516167692011432
+Reached target orientation — holding steady
+step_number 742
+Final Subtask
+ori_error: 1.5161697984286648
+Reached target orientation — holding steady
+step_number 743
+Final Subtask
+ori_error: 1.5161713760537805
+Reached target orientation — holding steady
+step_number 744
+Final Subtask
+ori_error: 1.516179557836298
+Reached target orientation — holding steady
+step_number 745
+Final Subtask
+ori_error: 1.5161831780240942
+Reached target orientation — holding steady
+step_number 746
+Final Subtask
+ori_error: 1.516187846516718
+Reached target orientation — holding steady
+step_number 747
+Final Subtask
+ori_error: 1.5161903553866258
+Reached target orientation — holding steady
+step_number 748
+Final Subtask
+ori_error: 1.5162009599409092
+Reached target orientation — holding steady
+step_number 749
+Final Subtask
+ori_error: 1.5162135035489694
+Reached target orientation — holding steady
+step_number 750
+Final Subtask
+ori_error: 1.5162230863960666
+Reached target orientation — holding steady
+step_number 751
+Final Subtask
+ori_error: 1.5162475557116457
+Reached target orientation — holding steady
+step_number 752
+Final Subtask
+ori_error: 1.5162582150511403
+Reached target orientation — holding steady
+step_number 753
+Final Subtask
+ori_error: 1.5162621711776718
+Reached target orientation — holding steady
+step_number 754
+Final Subtask
+ori_error: 1.5162703754606481
+Reached target orientation — holding steady
+step_number 755
+Final Subtask
+ori_error: 1.516281472540516
+Reached target orientation — holding steady
+step_number 756
+Final Subtask
+ori_error: 1.516293201653891
+Reached target orientation — holding steady
+step_number 757
+Final Subtask
+ori_error: 1.5163094374531518
+Reached target orientation — holding steady
+step_number 758
+Final Subtask
+ori_error: 1.5163250863624675
+Reached target orientation — holding steady
+step_number 759
+Final Subtask
+ori_error: 1.5163412746704878
+Reached target orientation — holding steady
+step_number 760
+Final Subtask
+ori_error: 1.5163591550601816
+Reached target orientation — holding steady
+step_number 761
+Final Subtask
+ori_error: 1.516360044592946
+Reached target orientation — holding steady
+step_number 762
+Final Subtask
+ori_error: 1.5163784105947942
+Reached target orientation — holding steady
+step_number 763
+Final Subtask
+ori_error: 1.516398685737028
+Reached target orientation — holding steady
+step_number 764
+Final Subtask
+ori_error: 1.5163994687585514
+Reached target orientation — holding steady
+step_number 765
+Final Subtask
+ori_error: 1.5164198623942513
+Reached target orientation — holding steady
+step_number 766
+Final Subtask
+ori_error: 1.5164356111682362
+Reached target orientation — holding steady
+step_number 767
+Final Subtask
+ori_error: 1.51644263756403
+Reached target orientation — holding steady
+step_number 768
+Final Subtask
+ori_error: 1.5164522299172567
+Reached target orientation — holding steady
+step_number 769
+Final Subtask
+ori_error: 1.5164630275249718
+Reached target orientation — holding steady
+step_number 770
+Final Subtask
+ori_error: 1.5164870302017
+Reached target orientation — holding steady
+step_number 771
+Final Subtask
+ori_error: 1.5164987210852545
+Reached target orientation — holding steady
+step_number 772
+Final Subtask
+ori_error: 1.5165231234137262
+Reached target orientation — holding steady
+step_number 773
+Final Subtask
+ori_error: 1.5165475553107797
+Reached target orientation — holding steady
+step_number 774
+Final Subtask
+ori_error: 1.5165637737553714
+Reached target orientation — holding steady
+step_number 775
+Final Subtask
+ori_error: 1.5165735544547894
+Reached target orientation — holding steady
+step_number 776
+Final Subtask
+ori_error: 1.5165908113671398
+Reached target orientation — holding steady
+step_number 777
+Final Subtask
+ori_error: 1.516605859156499
+Reached target orientation — holding steady
+step_number 778
+Final Subtask
+ori_error: 1.5166176420100743
+Reached target orientation — holding steady
+step_number 779
+Final Subtask
+ori_error: 1.5166301717884256
+Reached target orientation — holding steady
+step_number 780
+Final Subtask
+ori_error: 1.5166425347930248
+Reached target orientation — holding steady
+step_number 781
+Final Subtask
+ori_error: 1.5166611312485936
+Reached target orientation — holding steady
+step_number 782
+Final Subtask
+ori_error: 1.5166784176672057
+Reached target orientation — holding steady
+step_number 783
+Final Subtask
+ori_error: 1.5166986528701196
+Reached target orientation — holding steady
+step_number 784
+Final Subtask
+ori_error: 1.5167150964300433
+Reached target orientation — holding steady
+step_number 785
+Final Subtask
+ori_error: 1.516727572678373
+Reached target orientation — holding steady
+step_number 786
+Final Subtask
+ori_error: 1.5167444287327054
+Reached target orientation — holding steady
+step_number 787
+Final Subtask
+ori_error: 1.5167722037214517
+Reached target orientation — holding steady
+step_number 788
+Final Subtask
+ori_error: 1.5167827799696745
+Reached target orientation — holding steady
+step_number 789
+Final Subtask
+ori_error: 1.5167954309479776
+Reached target orientation — holding steady
+step_number 790
+Final Subtask
+ori_error: 1.516815606555667
+Reached target orientation — holding steady
+step_number 791
+Final Subtask
+ori_error: 1.5168412398157571
+Reached target orientation — holding steady
+step_number 792
+Final Subtask
+ori_error: 1.5168647809480014
+Reached target orientation — holding steady
+step_number 793
+Final Subtask
+ori_error: 1.5168780238475068
+Reached target orientation — holding steady
+step_number 794
+Final Subtask
+ori_error: 1.5169002234983535
+Reached target orientation — holding steady
+step_number 795
+Final Subtask
+ori_error: 1.5169184955125747
+Reached target orientation — holding steady
+step_number 796
+Final Subtask
+ori_error: 1.5169371355101593
+Reached target orientation — holding steady
+step_number 797
+Final Subtask
+ori_error: 1.516953530626153
+Reached target orientation — holding steady
+step_number 798
+Final Subtask
+ori_error: 1.5169725155559484
+Reached target orientation — holding steady
+step_number 799
+Final Subtask
+ori_error: 1.5169922236055131
+Reached target orientation — holding steady
+step_number 800
+Final Subtask
+ori_error: 1.5170218933249786
+Reached target orientation — holding steady
+step_number 801
+Final Subtask
+ori_error: 1.5170434650658655
+Reached target orientation — holding steady
+step_number 802
+Final Subtask
+ori_error: 1.5170511060560863
+Reached target orientation — holding steady
+step_number 803
+Final Subtask
+ori_error: 1.5170763256312536
+Reached target orientation — holding steady
+step_number 804
+Final Subtask
+ori_error: 1.5171120902727013
+Reached target orientation — holding steady
+step_number 805
+Final Subtask
+ori_error: 1.5171360086513124
+Reached target orientation — holding steady
+step_number 806
+Final Subtask
+ori_error: 1.5171758425383801
+Reached target orientation — holding steady
+step_number 807
+Final Subtask
+ori_error: 1.517212855183946
+Reached target orientation — holding steady
+step_number 808
+Final Subtask
+ori_error: 1.5172421312658133
+Reached target orientation — holding steady
+step_number 809
+Final Subtask
+ori_error: 1.5172637163370195
+Reached target orientation — holding steady
+step_number 810
+Final Subtask
+ori_error: 1.517296002400544
+Reached target orientation — holding steady
+step_number 811
+Final Subtask
+ori_error: 1.517324205533672
+Reached target orientation — holding steady
+step_number 812
+Final Subtask
+ori_error: 1.5173562852406783
+Reached target orientation — holding steady
+step_number 813
+Final Subtask
+ori_error: 1.5173865977493541
+Reached target orientation — holding steady
+step_number 814
+Final Subtask
+ori_error: 1.5174077420713241
+Reached target orientation — holding steady
+step_number 815
+Final Subtask
+ori_error: 1.5174349713398523
+Reached target orientation — holding steady
+step_number 816
+Final Subtask
+ori_error: 1.5174519026232898
+Reached target orientation — holding steady
+step_number 817
+Final Subtask
+ori_error: 1.5174832315633036
+Reached target orientation — holding steady
+step_number 818
+Final Subtask
+ori_error: 1.5175158960886956
+Reached target orientation — holding steady
+step_number 819
+Final Subtask
+ori_error: 1.5175554745762774
+Reached target orientation — holding steady
+step_number 820
+Final Subtask
+ori_error: 1.5175883699025914
+Reached target orientation — holding steady
+step_number 821
+Final Subtask
+ori_error: 1.5176114639917808
+Reached target orientation — holding steady
+step_number 822
+Final Subtask
+ori_error: 1.517634955573678
+Reached target orientation — holding steady
+step_number 823
+Final Subtask
+ori_error: 1.5176655544001854
+Reached target orientation — holding steady
+step_number 824
+Final Subtask
+ori_error: 1.5176974013572446
+Reached target orientation — holding steady
+step_number 825
+Final Subtask
+ori_error: 1.5177205498489517
+Reached target orientation — holding steady
+step_number 826
+Final Subtask
+ori_error: 1.5177438528279448
+Reached target orientation — holding steady
+step_number 827
+Final Subtask
+ori_error: 1.5177770217754196
+Reached target orientation — holding steady
+step_number 828
+Final Subtask
+ori_error: 1.5178076954960127
+Reached target orientation — holding steady
+step_number 829
+Final Subtask
+ori_error: 1.5178257358124412
+Reached target orientation — holding steady
+step_number 830
+Final Subtask
+ori_error: 1.51785796933967
+Reached target orientation — holding steady
+step_number 831
+Final Subtask
+ori_error: 1.5178916993791742
+Reached target orientation — holding steady
+step_number 832
+Final Subtask
+ori_error: 1.5179261045967178
+Reached target orientation — holding steady
+step_number 833
+Final Subtask
+ori_error: 1.5179565461433486
+Reached target orientation — holding steady
+step_number 834
+Final Subtask
+ori_error: 1.5180058107669068
+Reached target orientation — holding steady
+step_number 835
+Final Subtask
+ori_error: 1.518027203758622
+Reached target orientation — holding steady
+step_number 836
+Final Subtask
+ori_error: 1.5180579048699583
+Reached target orientation — holding steady
+step_number 837
+Final Subtask
+ori_error: 1.518092918471211
+Reached target orientation — holding steady
+step_number 838
+Final Subtask
+ori_error: 1.5181241235511382
+Reached target orientation — holding steady
+step_number 839
+Final Subtask
+ori_error: 1.518162974677691
+Reached target orientation — holding steady
+step_number 840
+Final Subtask
+ori_error: 1.5181825741499635
+Reached target orientation — holding steady
+step_number 841
+Final Subtask
+ori_error: 1.518216808975744
+Reached target orientation — holding steady
+step_number 842
+Final Subtask
+ori_error: 1.5182517447843404
+Reached target orientation — holding steady
+step_number 843
+Final Subtask
+ori_error: 1.518279396034863
+Reached target orientation — holding steady
+step_number 844
+Final Subtask
+ori_error: 1.5182981622290408
+Reached target orientation — holding steady
+step_number 845
+Final Subtask
+ori_error: 1.5183288886562591
+Reached target orientation — holding steady
+step_number 846
+Final Subtask
+ori_error: 1.5183626051376948
+Reached target orientation — holding steady
+step_number 847
+Final Subtask
+ori_error: 1.5183958809620404
+Reached target orientation — holding steady
+step_number 848
+Final Subtask
+ori_error: 1.5184249304075808
+Reached target orientation — holding steady
+step_number 849
+Final Subtask
+ori_error: 1.5184601198171497
+Reached target orientation — holding steady
+step_number 850
+Final Subtask
+ori_error: 1.5184894017156298
+Reached target orientation — holding steady
+step_number 851
+Final Subtask
+ori_error: 1.5185208278892715
+Reached target orientation — holding steady
+step_number 852
+Final Subtask
+ori_error: 1.518549939065677
+Reached target orientation — holding steady
+step_number 853
+Final Subtask
+ori_error: 1.5185827995306183
+Reached target orientation — holding steady
+step_number 854
+Final Subtask
+ori_error: 1.5186162748101457
+Reached target orientation — holding steady
+step_number 855
+Final Subtask
+ori_error: 1.5186536612464963
+Reached target orientation — holding steady
+step_number 856
+Final Subtask
+ori_error: 1.5186884045215774
+Reached target orientation — holding steady
+step_number 857
+Final Subtask
+ori_error: 1.5187176786153875
+Reached target orientation — holding steady
+step_number 858
+Final Subtask
+ori_error: 1.5187439871939072
+Reached target orientation — holding steady
+step_number 859
+Final Subtask
+ori_error: 1.518775370118434
+Reached target orientation — holding steady
+step_number 860
+Final Subtask
+ori_error: 1.5188142556838222
+Reached target orientation — holding steady
+step_number 861
+Final Subtask
+ori_error: 1.5188535686671119
+Reached target orientation — holding steady
+step_number 862
+Final Subtask
+ori_error: 1.5188856601160001
+Reached target orientation — holding steady
+step_number 863
+Final Subtask
+ori_error: 1.5189321394130213
+Reached target orientation — holding steady
+step_number 864
+Final Subtask
+ori_error: 1.51898902150565
+Reached target orientation — holding steady
+step_number 865
+Final Subtask
+ori_error: 1.5190302709400243
+Reached target orientation — holding steady
+step_number 866
+Final Subtask
+ori_error: 1.5190774585061437
+Reached target orientation — holding steady
+step_number 867
+Final Subtask
+ori_error: 1.5191193798203635
+Reached target orientation — holding steady
+step_number 868
+Final Subtask
+ori_error: 1.5191691002555723
+Reached target orientation — holding steady
+step_number 869
+Final Subtask
+ori_error: 1.519211302521123
+Reached target orientation — holding steady
+step_number 870
+Final Subtask
+ori_error: 1.5192432809271668
+Reached target orientation — holding steady
+step_number 871
+Final Subtask
+ori_error: 1.519271683733948
+Reached target orientation — holding steady
+step_number 872
+Final Subtask
+ori_error: 1.5193026939456384
+Reached target orientation — holding steady
+step_number 873
+Final Subtask
+ori_error: 1.519349695552017
+Reached target orientation — holding steady
+step_number 874
+Final Subtask
+ori_error: 1.5193947065391982
+Reached target orientation — holding steady
+step_number 875
+Final Subtask
+ori_error: 1.5194495575486415
+Reached target orientation — holding steady
+step_number 876
+Final Subtask
+ori_error: 1.5195000197093482
+Reached target orientation — holding steady
+step_number 877
+Final Subtask
+ori_error: 1.5195391556303182
+Reached target orientation — holding steady
+step_number 878
+Final Subtask
+ori_error: 1.519585863112156
+Reached target orientation — holding steady
+step_number 879
+Final Subtask
+ori_error: 1.519637641703553
+Reached target orientation — holding steady
+step_number 880
+Final Subtask
+ori_error: 1.5196759278192582
+Reached target orientation — holding steady
+step_number 881
+Final Subtask
+ori_error: 1.5197261543252287
+Reached target orientation — holding steady
+step_number 882
+Final Subtask
+ori_error: 1.5197666916016663
+Reached target orientation — holding steady
+step_number 883
+Final Subtask
+ori_error: 1.5198111325690344
+Reached target orientation — holding steady
+step_number 884
+Final Subtask
+ori_error: 1.5198459679303546
+Reached target orientation — holding steady
+step_number 885
+Final Subtask
+ori_error: 1.5198953714422634
+Reached target orientation — holding steady
+step_number 886
+Final Subtask
+ori_error: 1.519942699978338
+Reached target orientation — holding steady
+step_number 887
+Final Subtask
+ori_error: 1.519990144162882
+Reached target orientation — holding steady
+step_number 888
+Final Subtask
+ori_error: 1.5200358817850423
+Reached target orientation — holding steady
+step_number 889
+Final Subtask
+ori_error: 1.5200847804889692
+Reached target orientation — holding steady
+step_number 890
+Final Subtask
+ori_error: 1.5201206975506292
+Reached target orientation — holding steady
+step_number 891
+Final Subtask
+ori_error: 1.5201626331672198
+Reached target orientation — holding steady
+step_number 892
+Final Subtask
+ori_error: 1.5202055534385426
+Reached target orientation — holding steady
+step_number 893
+Final Subtask
+ori_error: 1.5202370286923268
+Reached target orientation — holding steady
+step_number 894
+Final Subtask
+ori_error: 1.5202904809117797
+Reached target orientation — holding steady
+step_number 895
+Final Subtask
+ori_error: 1.5203232924946064
+Reached target orientation — holding steady
+step_number 896
+Final Subtask
+ori_error: 1.5203558649929265
+Reached target orientation — holding steady
+step_number 897
+Final Subtask
+ori_error: 1.520405638434669
+Reached target orientation — holding steady
+step_number 898
+Final Subtask
+ori_error: 1.5204470302913904
+Reached target orientation — holding steady
+step_number 899
+Final Subtask
+ori_error: 1.5204944407518206
+Reached target orientation — holding steady
+step_number 900
+Final Subtask
+ori_error: 1.520542850732908
+Reached target orientation — holding steady
+step_number 901
+Final Subtask
+ori_error: 1.5205895535503335
+Reached target orientation — holding steady
+step_number 902
+Final Subtask
+ori_error: 1.520639855357815
+Reached target orientation — holding steady
+step_number 903
+Final Subtask
+ori_error: 1.5206932346512865
+Reached target orientation — holding steady
+step_number 904
+Final Subtask
+ori_error: 1.5207474032432087
+Reached target orientation — holding steady
+step_number 905
+Final Subtask
+ori_error: 1.5207921033861675
+Reached target orientation — holding steady
+step_number 906
+Final Subtask
+ori_error: 1.5208504593261536
+Reached target orientation — holding steady
+step_number 907
+Final Subtask
+ori_error: 1.5209051645981941
+Reached target orientation — holding steady
+step_number 908
+Final Subtask
+ori_error: 1.5209461194411493
+Reached target orientation — holding steady
+step_number 909
+Final Subtask
+ori_error: 1.5209893585436183
+Reached target orientation — holding steady
+step_number 910
+Final Subtask
+ori_error: 1.5210283800254334
+Reached target orientation — holding steady
+step_number 911
+Final Subtask
+ori_error: 1.5210761011047857
+Reached target orientation — holding steady
+step_number 912
+Final Subtask
+ori_error: 1.5211206144515896
+Reached target orientation — holding steady
+step_number 913
+Final Subtask
+ori_error: 1.521160449410609
+Reached target orientation — holding steady
+step_number 914
+Final Subtask
+ori_error: 1.5212131697204394
+Reached target orientation — holding steady
+step_number 915
+Final Subtask
+ori_error: 1.5212577278229757
+Reached target orientation — holding steady
+step_number 916
+Final Subtask
+ori_error: 1.521303978729085
+Reached target orientation — holding steady
+step_number 917
+Final Subtask
+ori_error: 1.5213394843817587
+Reached target orientation — holding steady
+step_number 918
+Final Subtask
+ori_error: 1.521394778637731
+Reached target orientation — holding steady
+step_number 919
+Final Subtask
+ori_error: 1.5214536274941972
+Reached target orientation — holding steady
+step_number 920
+Final Subtask
+ori_error: 1.5214884332928826
+Reached target orientation — holding steady
+step_number 921
+Final Subtask
+ori_error: 1.52153844767501
+Reached target orientation — holding steady
+step_number 922
+Final Subtask
+ori_error: 1.5215918534125004
+Reached target orientation — holding steady
+step_number 923
+Final Subtask
+ori_error: 1.52163627670923
+Reached target orientation — holding steady
+step_number 924
+Final Subtask
+ori_error: 1.5216856290377319
+Reached target orientation — holding steady
+step_number 925
+Final Subtask
+ori_error: 1.521744875040382
+Reached target orientation — holding steady
+step_number 926
+Final Subtask
+ori_error: 1.5217992776651887
+Reached target orientation — holding steady
+step_number 927
+Final Subtask
+ori_error: 1.5218388125843167
+Reached target orientation — holding steady
+step_number 928
+Final Subtask
+Placed on slot
+ori_error: 1.5218753855498712
+Reached target orientation — holding steady
+step_number 929
+Final Subtask
+Placed on slot
+ori_error: 1.5217009135400226
+Reached target orientation — holding steady
+step_number 930
+Final Subtask
+Placed on slot
+ori_error: 1.5216285621286343
+Reached target orientation — holding steady
+step_number 931
+Final Subtask
+Placed on slot
+ori_error: 1.5216001129241477
+Reached target orientation — holding steady
+step_number 932
+Final Subtask
+Placed on slot
+ori_error: 1.5215871227342925
+Reached target orientation — holding steady
+step_number 933
+Final Subtask
+Placed on slot
+ori_error: 1.5215565274498437
+Reached target orientation — holding steady
+step_number 934
+Final Subtask
+Placed on slot
+ori_error: 1.5215113989774578
+Reached target orientation — holding steady
+step_number 935
+Final Subtask
+Placed on slot
+ori_error: 1.5214527584095594
+Reached target orientation — holding steady
+step_number 936
+Final Subtask
+Placed on slot
+ori_error: 1.5213967807818174
+Reached target orientation — holding steady
+step_number 937
+Final Subtask
+Placed on slot
+ori_error: 1.5213385861250204
+Reached target orientation — holding steady
+step_number 938
+Final Subtask
+Placed on slot
+ori_error: 1.5212828668987208
+Reached target orientation — holding steady
+step_number 939
+Final Subtask
+Placed on slot
+ori_error: 1.52123586596681
+Reached target orientation — holding steady
+step_number 940
+Final Subtask
+Placed on slot
+ori_error: 1.5211834304799399
+Reached target orientation — holding steady
+step_number 941
+Final Subtask
+Placed on slot
+ori_error: 1.5211317750941287
+Reached target orientation — holding steady
+step_number 942
+Final Subtask
+Placed on slot
+ori_error: 1.5210808841090502
+Reached target orientation — holding steady
+step_number 943
+Final Subtask
+Placed on slot
+ori_error: 1.5210305010728553
+Reached target orientation — holding steady
+step_number 944
+Final Subtask
+Placed on slot
+ori_error: 1.520980456497113
+Reached target orientation — holding steady
+step_number 945
+Final Subtask
+Placed on slot
+ori_error: 1.5209306564198968
+Reached target orientation — holding steady
+step_number 946
+Final Subtask
+Placed on slot
+ori_error: 1.5208810580302443
+Reached target orientation — holding steady
+step_number 947
+Final Subtask
+Placed on slot
+ori_error: 1.5208316521729006
+Reached target orientation — holding steady
+step_number 948
+Final Subtask
+Placed on slot
+ori_error: 1.520782450365965
+Reached target orientation — holding steady
+step_number 949
+Final Subtask
+Placed on slot
+ori_error: 1.5207335711138037
+Reached target orientation — holding steady
+step_number 950
+Final Subtask
+Placed on slot
+ori_error: 1.5206852648401907
+Reached target orientation — holding steady
+hitting geom slot_g0
+Done simulating
