@@ -86,8 +86,11 @@ The following code opens a mujoco window and executes the agent controlled by OS
 The following videos were obtained when played in :
 1. Deault `sim_speed` and `step_speed`
 ![video2](./robosuite_data_2/place_0.002.gif)
+
 2. `step_speed` at 10 and default `sim_speed`
+
 ![video3](./robosuite_data_2/playat10x.gif)
+
 3. `sim_speed` at 0.005 and default `step_speed`
 ![video4](./robosuite_data_2/largersimupdate0.005.gif)
 
