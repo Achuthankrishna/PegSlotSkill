@@ -25,6 +25,22 @@ pip install -r requirements-extra.txt
 ```sh
 pip install numpy==1.23.3 numba==0.56.4
 ```
+## Custom Env Creation
+If users want to create a custom env for separate tasks , follow the instructions below :
+1. Add object stls into `robosuite/models/assets/objects/meshes` folder
+2. Create respective object xml by following sample xml templates on the `robosuite/models/assets/objects` folder
+3. Create Object classes inside `robosuite/robosuite/models/objects/xml_objects.py` referencing the xml file.
+4. Call the Object class anywhere in the code to initialize it
+
+**Note : All custom assets are convex hulls when loaded. If you want to ensure concavity perform convex decomposition**
+
+### Convex Decomposition
+Users can perform convex decomposition on convex hull stls using the following code
+```sh
+python robosuite/robosuite/models/assets/objects/convex_decomposition.py --mesh_path XXX/robosuite/robosuite/models/assets/objects/meshes/cuboid.stl
+```
+This will split into n meshes , where n can be passed as args. All these meshes can be used to create a new object xml.
+
 ## Teleoperation Skill
 Users can teleop the robot + gripper using the following scripts which saves the recording as Hdf5 file consisting of states and observations required for RL and also mimicgen. The base saving format is robomimic.
 
@@ -43,5 +59,35 @@ The teleop-ed data can be played back using a playback script borrowed from Robo
 python robosuite/scripts/playback_dataset.py --dataset XXXX/robosuite_data_2/demo_2025-11-XXXX.hdf5  --use-actions --n 1
 ```
 here `use-actions` is used to step the ennvironments with the actions stored in the H5 file. 
+
+A sample teleop playback using actions
+
 ![Video](./robosuite_data_2/use_action.gif)
+
+## Agent Simulation
+We have created a simulated agent that's purely hurestics based. The task is subdivided into n subtasks for easier control and execution of this heurestics based controller. The final success condition checks for contact between peg_geom and slot_geom_0.
+
+The created agent can be run using the following script:
+```sh
+python robosuite/scripts/playback_agent.py --log_path robosuite/sim_log.json
+```
+where users can control the following args : 
+* `sim_speed` which controls the simulation update rate (default 0.002 in Mujoco)
+* `step_speed` which controls the speed at which the simulation step loop runs in . Deault it has 0.1 delay,but can be made faster by passing a num value
+* `episode_length` which controls the length of the entire episode ie; traj len
+
+The following code opens a mujoco window and executes the agent controlled by OSC controller with every subtask mentioning the end effector goal pos. The file outputs `sim_log.json` which covers the following modalities:
+* `commanded_robot_pos` : A 7D vector which has commanded robot poses [x,y,z,ax,ay,az,gripper_val]
+* `gripper_pose_observed`: A 7D vector which has observed robot poses obtained from stepping the environment using the commanded values in [x,y,z,ax,ay,az,gripper_val]
+* `peg_pos_commanded` : The commanded peg_pos obtained when env.reset() is called
+* `hole_pos_commanded` : The commanded peg_pos obtained when env.reset() is called
+* `success` : Whether the episode reached success conditions
+
+The following videos were obtained when played in :
+1. Deault `sim_speed` and `step_speed`
+2. `sim_speed` of 0.001 and default `step_speed`
+3. `step_speed` at 10 and default `sim_speed`
+4. `sim_speed` at 0.005 and default `step_speed`
+
+
 
