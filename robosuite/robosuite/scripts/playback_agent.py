@@ -190,10 +190,31 @@ def play_sim(agent,speed=1.0,episode_len=100,log_path="sim_log.json",control_fre
         #apply to env and step
         obs,_,_,_=env.step(np.concatenate([pose,[jaw]]))
         #to update per speed
+        sim_state = {
+            "step": int(s),
+            "gripper_pose_commanded": pose.tolist(),
+            "gripper_pose_observed": obs['robot0_joint_pos'].tolist(),
+            "jaw_cmd": float(jaw) if not isinstance(jaw, (list, np.ndarray)) else jaw.tolist(),
+            "peg_pos_commanded": env.sim.data.get_site_xpos("peg_default_site").tolist(),
+            "hole_pos_commanded": env.sim.data.get_site_xpos("slot_default_site").tolist(),
+            "gripper_to_cube_pos": obs['gripper_to_cube_pos'].tolist(),
+            "robot_eef_pos": obs['robot0_eef_pos'].tolist(),
+            "success":success,
+        }
+
+
 
         time.sleep(0.01/speed)
+        #just to terminate eraly
+        if s>2500:
+            if done:
+                break
         if success:
             break
+        data.append(sim_state)
+    with open(log_path, "w") as f:
+        json.dump(data, f, indent=2)
+
     env.close()
     print("Done simulating")
 
@@ -224,5 +245,5 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     macros.SIMULATION_TIMESTEP=args.sim_speed
-    play_sim(agent,episode_len=args.episode_length,speed=args.step_speed)
+    play_sim(agent,episode_len=args.episode_length,speed=args.step_speed,log_path=args.log_path)
     
