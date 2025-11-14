@@ -85,6 +85,7 @@ The following code opens a mujoco window and executes the agent controlled by OS
 
 The following videos were obtained when played in :
 1. Deault `sim_speed` and `step_speed`
+![video2](https://drive.google.com/file/d/1qa-VxReb8xJGhrKYd7VwiXmHcdWkB_1V/view?usp=drive_link)
 2. `sim_speed` of 0.001 and default `step_speed`
 3. `step_speed` at 10 and default `sim_speed`
 4. `sim_speed` at 0.005 and default `step_speed`
