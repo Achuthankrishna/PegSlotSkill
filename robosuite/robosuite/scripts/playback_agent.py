@@ -16,7 +16,7 @@ class PickPlaceAgent:
     4. bring arm down closer to hole pose
     5. release gripper
     """
-    def __init__(self,lift_height=0.15, jaw_open=-1.0, jaw_close=0.5):
+    def __init__(self,lift_height=0.15, jaw_open=0.0, jaw_close=0.5):
         self.step=0
         self.reach_pos=None
         self.lift_height = lift_height
@@ -50,7 +50,7 @@ class PickPlaceAgent:
             # Close jaw when near peg
             print("Norm dist between gripper and slot",np.linalg.norm(gripper_pos - target_pos))
             if np.allclose(gripper_pos, target_pos, atol=1e-2):
-                breakpoint()
+                # breakpoint()
                 print("Closing gripper on peg")
                 jaw = self.jaw_close
                 if check_contact(env.sim,env.robots[0].gripper['right'].contact_geoms[10],env.objects[0].contact_geoms[0]):
@@ -91,7 +91,7 @@ class PickPlaceAgent:
         elif self.subtask==4:
             print("Bringing closer to placing")
             # target_pos = [self.reach2_pos[0]+0.025,self.reach2_pos[1]-0.03, self.reach2_pos[2]+0.1]
-            target_pos = [self.reach2_pos[0]+0.02,self.reach2_pos[1]-0.03, self.reach2_pos[2]+0.1]
+            target_pos = [self.reach2_pos[0]+0.025,self.reach2_pos[1]-0.03, self.reach2_pos[2]+0.1]
             jaw=self.jaw_close
             if np.allclose(gripper_pos, target_pos, atol=1e-2):
                 print("Reached lift height, holding position")
@@ -117,27 +117,35 @@ class PickPlaceAgent:
         #subtask 5: place into the slot
         elif self.subtask==5:
             print("Final Subtask")
-            target_pos = [self.reach2_pos[0],self.reach2_pos[1]-0.02, self.reach2_pos[2]+0.05]
+            target_pos = [self.reach2_pos[0]-0.02,self.reach2_pos[1]-0.018, self.reach2_pos[2]+0.025]
             jaw=self.jaw_close
             if np.allclose(gripper_pos, target_pos, atol=1e-2):
                 print("Placed on slot")
                 #break the loop
-                jaw = self.jaw_open
+                jaw = -1.0
                 done=True
-            pos = 1.0*(target_pos-gripper_pos)
-            ori = np.zeros(3)
-            # target_ori = [0,0,0]
-            # ori= 0.1*(np.array(target_ori) - np.zeros(3))
-            # from scipy.spatial.transform import Rotation as R
-            # current_rot_mat = env.sim.data.get_site_xmat("gripper0_right_grip_site").reshape(3,3)
-            # current_ori = R.from_matrix(current_rot_mat).as_euler('xyz')
-            # ori_error = target_ori - current_ori
-            # ori_norm = np.linalg.norm(ori_error)
-            # print("ori_error:", ori_norm)
+            pos = 3.0*(target_pos-gripper_pos) #pretty faster
+            target_ori = [0,0,0]
+            ori= 0.1*(np.array(target_ori) - np.zeros(3))
+            from scipy.spatial.transform import Rotation as R
+            current_rot_mat = env.sim.data.get_site_xmat("gripper0_right_grip_site").reshape(3,3)
+            current_ori = R.from_matrix(current_rot_mat).as_euler('xyz')
+            ori_error = target_ori - current_ori
+            ori_norm = np.linalg.norm(ori_error)
+            print("ori_error:", ori_norm)
+            # Stop rotating once near target
+            if ori_norm < 1.5:
+                ori = -0.05 * ori_error
+            else:
+                print("Reached target orientation — holding steady")
+                ori = np.zeros(3)
+
         else:
             pos = np.zeros(3)
             ori = np.zeros(3)
             jaw = -1.0
+        if env._check_success():
+            success=True
 
 
 
@@ -184,7 +192,7 @@ def play_sim(agent,speed=1.0,episode_len=100,log_path="sim_log.json",control_fre
         #to update per speed
 
         time.sleep(0.01/speed)
-        if success or done:
+        if success:
             break
     env.close()
     print("Done simulating")
