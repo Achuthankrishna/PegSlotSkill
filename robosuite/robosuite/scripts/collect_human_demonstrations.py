@@ -19,6 +19,7 @@ import robosuite as suite
 from robosuite.controllers import load_composite_controller_config
 from robosuite.controllers.composite.composite_controller import WholeBody
 from robosuite.wrappers import DataCollectionWrapper, VisualizationWrapper
+from robosuite.utils.robomimic_dataset_utils import convert_to_robomimic_format
 
 
 def collect_human_trajectory(env, device, arm, max_fr, goal_update_mode,render=True):
@@ -409,3 +410,5 @@ if __name__ == "__main__":
     while True:
         ep_directory,commanded_absolute_actions=collect_human_trajectory(env, device, args.arm, args.max_fr, args.goal_update_mode)
         hdf5_path=gather_demonstrations_as_hdf5(ep_directory,tmp_directory, env_info,commanded_absolute_actions=commanded_absolute_actions)
+        convert_to_robomimic_format(hdf5_path)
+
