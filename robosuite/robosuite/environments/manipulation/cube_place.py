@@ -222,7 +222,11 @@ class CubePlace(ManipulationEnv):
             renderer_config=renderer_config,
             seed=seed,
         )
+   #adding basic reward for avoiding errrors
 
+    def reward(self, action=None):
+        reward = 0
+        return reward
     def _load_model(self):
         """
         Loads an xml model, puts it in self.model
@@ -253,7 +257,6 @@ class CubePlace(ManipulationEnv):
         cube_xml_path = "/home/achukrish/robosuite/robosuite/models/assets/cube.xml"  # Update this path
         self.cube = CubeObject(name="peg")
         self.cuboid = CuboidObject(name="slot")
-        breakpoint()
 
         # # Create placement initializer for both objects
         mujoco_objects = [self.cube, self.cuboid]
@@ -382,13 +385,16 @@ class CubePlace(ManipulationEnv):
 
         # Reset all object positions using initializer sampler if we're not directly loading from an xml
         if not self.deterministic_reset:
-
-            # Sample from the placement initializer for all objects
-            object_placements = self.placement_initializer.sample()
-
-            # Loop through all objects and reset their positions
-            for obj_pos, obj_quat, obj in object_placements.values():
-                self.sim.data.set_joint_qpos(obj.joints[0], np.concatenate([np.array(obj_pos), np.array(obj_quat)]))
+            if self.placement_initializer is not None:
+                object_placements = self.placement_initializer.sample()
+                for obj_pos, obj_quat, obj in object_placements.values():
+                    self.sim.data.set_joint_qpos(obj.joints[0], np.concatenate([np.array(obj_pos), np.array(obj_quat)]))
+            else:
+                # Set objects to their constant positions
+                for obj in self.objects:
+                    if hasattr(obj, "initial_pos"):
+                        # Set position, keep orientation as default (identity quaternion)
+                        self.sim.data.set_joint_qpos(obj.joints[0], np.concatenate([np.array(obj.initial_pos), np.array([1, 0, 0, 0])]))
 
     def visualize(self, vis_settings):
         """

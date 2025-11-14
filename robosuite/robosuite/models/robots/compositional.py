@@ -102,3 +102,18 @@ class PandaDexLH(Panda):
     @property
     def gripper_mount_quat_offset(self):
         return {"right": [0.5, -0.5, 0.5, -0.5]}
+class PandaRobotiq(Panda):
+    @property
+    def default_base(self):
+        return "NoActuationBase"
+    @property
+    def default_gripper(self):
+        return {"right": "Robotiq85Gripper"}
+
+    @property
+    def gripper_mount_pos_offset(self):
+        return {"right": [0.0, 0.0, 0.0]}
+
+    @property
+    def gripper_mount_quat_offset(self):
+        return {"right": [1.0, 0.0, 0.0, 0.0]}

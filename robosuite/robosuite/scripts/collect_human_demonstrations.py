@@ -21,7 +21,7 @@ from robosuite.controllers.composite.composite_controller import WholeBody
 from robosuite.wrappers import DataCollectionWrapper, VisualizationWrapper
 
 
-def collect_human_trajectory(env, device, arm, max_fr, goal_update_mode):
+def collect_human_trajectory(env, device, arm, max_fr, goal_update_mode,render=True):
     """
     Use the device (keyboard or SpaceNav 3D mouse) to collect a demonstration.
     The rollout trajectory is saved to files in npz format.
@@ -407,5 +407,5 @@ if __name__ == "__main__":
 
     # collect demonstrations
     while True:
-        ep_directory=collect_human_trajectory(env, device, args.arm, args.max_fr, args.goal_update_mode)
-        hdf5_path=gather_demonstrations_as_hdf5(ep_directory,tmp_directory, env_info)
+        ep_directory,commanded_absolute_actions=collect_human_trajectory(env, device, args.arm, args.max_fr, args.goal_update_mode)
+        hdf5_path=gather_demonstrations_as_hdf5(ep_directory,tmp_directory, env_info,commanded_absolute_actions=commanded_absolute_actions)
